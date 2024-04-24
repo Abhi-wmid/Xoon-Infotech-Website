@@ -52,9 +52,6 @@ const navbar = () =>{
 navbar()
 
 
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-// const swiper = new Swiper()
-// const swipperJs = () =>{
 
 // }
 document.addEventListener('DOMContentLoaded', function() {
@@ -98,3 +95,194 @@ document.addEventListener('DOMContentLoaded', function() {
   // Auto slide change
   // setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
 });
+
+// scrollUpIco
+
+window.addEventListener('scroll', function() {
+  var scrollUpIcon = document.getElementById('scroll-up-icon');
+  if (window.scrollY > 100) {
+      scrollUpIcon.classList.add('show');
+  } else {
+      scrollUpIcon.classList.remove('show');
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelector('.slides');
+  let startX = 0;
+  let endX = 0;
+
+  slider.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchmove', function (e) {
+      endX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', function () {
+      const diff = startX - endX;
+      if (Math.abs(diff) > 50) { // Adjust swipe sensitivity here
+          if (diff > 0) {
+              // Swiped left
+              nextSlide();
+          } else {
+              // Swiped right
+              prevSlide();
+          }
+      }
+  });
+
+  function nextSlide() {
+      // Implement logic to navigate to the next slide
+      slides.style.transform = 'translateX(-100%)'; // Example: Move to the next slide
+  }
+
+  function prevSlide() {
+      // Implement logic to navigate to the previous slide
+      slides.style.transform = 'translateX(0)'; // Example: Move to the previous slide
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('homeRight');
+  var image = document.getElementById('moving-text');
+  var containerRect = container.getBoundingClientRect();
+  var containerCenterX = containerRect.left + containerRect.width / 2;
+  var containerCenterY = containerRect.top + containerRect.height / 2;
+
+  container.addEventListener('mousemove', function(e) {
+      var cursorX = e.clientX;
+      var cursorY = e.clientY;
+
+      // Calculate the distance from the cursor to the center of the container
+      var distX = cursorX - containerCenterX;
+      var distY = cursorY - containerCenterY;
+
+      // Define the maximum distance the image can move from the center
+      var maxDistance = 50;
+
+      // Calculate the percentage of maximum distance for the image to move
+      var moveX = (distX / containerRect.width) * maxDistance;
+      var moveY = (distY / containerRect.height) * maxDistance;
+
+      // Apply the movement to the image with animation
+      image.style.transition = 'transform 0.1s ease';
+      image.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+  });
+
+  container.addEventListener('mouseleave', function() {
+      // Reset image position when cursor leaves the container
+      image.style.transition = 'transform 0.3s ease';
+      image.style.transform = 'translate(0, 0)';
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('homeLeft');
+  var text = container.querySelectorAll('h3, h1, h4');
+  var containerRect = container.getBoundingClientRect();
+  var containerCenterX = containerRect.left + containerRect.width / 2;
+  var containerCenterY = containerRect.top + containerRect.height / 2;
+
+  container.addEventListener('mousemove', function(e) {
+      var cursorX = e.clientX;
+      var cursorY = e.clientY;
+
+      // Calculate the distance from the cursor to the center of the container
+      var distX = cursorX - containerCenterX;
+      var distY = cursorY - containerCenterY;
+
+      // Define the maximum distance the text can move from the center
+      var maxDistance = 20;
+
+      // Calculate the percentage of maximum distance for the text to move
+      var moveX = (distX / containerRect.width) * maxDistance;
+      var moveY = (distY / containerRect.height) * maxDistance;
+
+      // Apply the movement to each text element with animation
+      text.forEach(function(element) {
+          element.style.transition = 'transform 0.1s ease';
+          element.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+      });
+  });
+
+  container.addEventListener('mouseleave', function() {
+      // Reset text position when cursor leaves the container
+      text.forEach(function(element) {
+          element.style.transition = 'transform 0.3s ease';
+          element.style.transform = 'translate(0, 0)';
+      });
+  });
+});
+
+// for contact
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector('.form');
+
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Validate email
+      const email = form.querySelector('input[type="email"]').value;
+      if (!validateEmail(email)) {
+          showError('Please enter a valid email address.');
+          return;
+      }
+
+      // Validate name
+      const name = form.querySelector('input[type="text"]').value;
+      if (name.trim() === '') {
+          showError('Please enter your name.');
+          return;
+      }
+
+      // Validate phone number
+      const phone = form.querySelector('input[type="tel"]').value;
+      if (!validatePhoneNumber(phone)) {
+          showError('Please enter a valid phone number.');
+          return;
+      }
+
+      // Validate message
+      const message = form.querySelector('textarea').value;
+      if (message.trim() === '') {
+          showError('Please enter your message.');
+          return;
+      }
+
+      // If all validations pass, submit the form
+      form.submit();
+  });
+
+  // Function to validate email
+  function validateEmail(email) {
+      const re = /\S+@\S+\.\S+/;
+      return re.test(email);
+  }
+
+  // Function to validate phone number
+  function validatePhoneNumber(phone) {
+      const re = /^\d{10}$/;
+      return re.test(phone);
+  }
+
+  // Function to show error message
+  function showError(message) {
+      const errorElement = document.createElement('div');
+      errorElement.classList.add('error');
+      errorElement.innerText = message;
+      form.appendChild(errorElement);
+
+      // Remove error message after 3 seconds
+      setTimeout(function() {
+          errorElement.remove();
+      }, 3000);
+  }
+});
+
