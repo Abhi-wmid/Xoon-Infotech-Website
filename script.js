@@ -96,16 +96,51 @@ document.addEventListener('DOMContentLoaded', function() {
   // setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
 });
 
-// scrollUpIco
+// // scrollUpIco
 
+// window.addEventListener('scroll', function() {
+//   var scrollUpIcon = document.getElementById('scroll-up-icon');
+//   if (window.scrollY > 100) {
+//       scrollUpIcon.classList.add('show');
+//   } else {
+//       scrollUpIcon.classList.remove('show');
+//   }
+// });
+
+//update scrollico
+
+
+// Smooth scroll function
+function scrollToTop() {
+  var scrollDuration = 1000; // Scroll duration in milliseconds
+  var scrollStep = -window.scrollY / (scrollDuration / 15);
+  var scrollInterval = setInterval(function() {
+      if (window.scrollY !== 0) {
+          window.scrollBy(0, scrollStep);
+      } else {
+          clearInterval(scrollInterval);
+      }
+  }, 15);
+}
+
+// Scroll event listener to show/hide the scroll-up icon
 window.addEventListener('scroll', function() {
   var scrollUpIcon = document.getElementById('scroll-up-icon');
-  if (window.scrollY > 100) {
+  if (window.scrollY > 500) {
       scrollUpIcon.classList.add('show');
   } else {
       scrollUpIcon.classList.remove('show');
   }
 });
+
+// Click event listener for the scroll-up icon
+document.querySelector('.scroll-up-link').addEventListener('click', function(event) {
+  event.preventDefault();
+  scrollToTop();
+});
+
+// slider
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
