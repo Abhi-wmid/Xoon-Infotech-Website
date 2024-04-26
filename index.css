@@ -713,16 +713,16 @@ main .services .servicesContainer {
 }
 main .services .servicesContainer .cards {
   padding: 2rem;
-  margin: 1rem 2rem;
+  margin: 1.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-shrink: none;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
-  width: 320px;
+  width: 180px;
   height: 250px;
   border: 1px solid #0b2545;
 }
@@ -733,6 +733,7 @@ main .services .servicesContainer .cards img {
      object-fit: cover;
   margin: 1rem 0rem;
 }
+
 @media only screen and (min-width: 1024px) {
   main .services .servicesContainer .cards img {
     width: 150px;
