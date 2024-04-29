@@ -321,3 +321,65 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+    // js for our team
+    var swiper = new Swiper(".slide-content", {
+      slidesPerView: 3,
+      spaceBetween: 25,
+      loop: true,
+      centerSlide: 'true',
+      fade: 'true',
+      grabCursor: 'true',
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: 'true',
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      breakpoints:{
+          0: {
+              slidesPerView: 1,
+          },
+          520: {
+              slidesPerView: 2,
+          },
+          950: {
+              slidesPerView: 3,
+          }
+      }
+    });
+
+
+    // navbar srinking
+    let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+  let currentScroll = window.scrollY;
+  let navbar = document.querySelector('.navbar');
+  let contactButton = document.querySelector('.nav-button');
+
+  if (currentScroll > lastScrollTop) {
+    // scrolling down
+    navbar.classList.add('scroll-down'); // Add class for scrolling down
+    navbar.classList.remove('scroll-up'); // Remove class for scrolling up
+    contactButton.classList.add('scroll-down'); // Add class for scrolling down
+    contactButton.classList.remove('scroll-up'); // Remove class for scrolling up
+  } else {
+    // scrolling up
+    navbar.classList.remove('scroll-down'); // Remove class for scrolling down
+    navbar.classList.add('scroll-up'); // Add class for scrolling up
+    contactButton.classList.remove('scroll-down'); // Remove class for scrolling down
+    contactButton.classList.add('scroll-up'); // Add class for scrolling up
+  }
+
+  // If the user has scrolled to the top of the page, remove the scroll-up class
+  if (currentScroll === 0) {
+    navbar.classList.remove('scroll-up');
+    contactButton.classList.remove('scroll-up');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+});

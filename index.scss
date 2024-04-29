@@ -241,6 +241,34 @@ main {
       padding: 2rem;
     }
   }
+  .navbar {
+    transition: height 0.3s ease; 
+  }
+  
+  .navbar.scroll-down {
+    height: 60px; 
+    line-height: 50px; 
+  }
+  
+  .navbar.scroll-up {
+    height: 80px;
+    line-height: 80px; 
+  }
+  
+  .nav-button {
+    transition: all 0.3s ease; 
+    text-align: center;
+  }
+  
+  .nav-button.scroll-down {
+    height: 30px; 
+    line-height: 10px; 
+  }
+  
+  .nav-button.scroll-up {
+    height: 50px; 
+    line-height: 25px;
+  }
 
   .nav-items > ul > li {
     position: relative;
@@ -333,6 +361,8 @@ main {
     z-index: 1;
     font-weight: 500;
   }
+
+  
 
   #hamburger-menu,
   #mobile-menu {

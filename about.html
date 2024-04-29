@@ -6,12 +6,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="./index.css">
+    <!-- for swiper in our team -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+<style>
+    .mission-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+main footer{
+    border-radius: 0px;
+  }
 
+/* .customer-reviews {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.customer-reviews .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.customer-reviews h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.customer-reviews .review {
+    margin-bottom: 20px;
+}
+
+.customer-reviews .review p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.customer-reviews .review span {
+    font-weight: bold;
+} */
+
+ /* css for our team */
+ .team-heading {
+      text-align: center; 
+      margin-top: 40px;
+      margin-bottom: -20px;
+      color: white;
+  }
+  
+  
+  .slide-container {
+      max-width: 1120px;
+      width: 100%;
+      padding: 40px 0;
+  }
+  
+  .slide-content {
+      margin: 0 40px;
+      overflow: hidden;
+      border-radius: 25px;
+  }
+  
+  .card {
+      border-radius: 25px;
+      background-color: #fff;
+  }
+  
+  .image-content,
+  .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 14px;
+  }
+  
+  .image-content {
+      position: relative;
+      row-gap: 5px;
+      padding: 25px 0;
+  }
+  
+  .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #4070F4;
+      border-radius: 25px 25px 0 25px;
+  }
+  
+  .overlay::before,
+  .overlay::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      height: 40px;
+      width: 40px;
+      background-color: #4070F4;
+      border-radius: 0 0 0 70px;
+  }
+  
+  .overlay::after {
+      border-radius: 0 25px 0 25px;
+      background-color: white;
+  }
+  
+  .card-image {
+      position: relative;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background-color: #efefef;
+      padding: 3px;
+  }
+  
+  .card-image .card-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #4070F4;
+  }
+  
+  .name {
+      font-size: 18px;
+      font-weight: 500;
+      color: black;
+      margin-bottom: 5px;
+      font: bold;
+  }
+  
+  .description1 {
+      font-size: 14px;
+      color: #32320c;
+      text-align: center;
+  }
+  
+  .button {
+      border: none;
+      font-size: 16px;
+      color: #fff;
+      padding: 8px 16px;
+      background-color: #4070F4;
+      border-radius: 6px;
+      margin: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+      background-color: #154dea;
+  }
+  
+  .swiper-navBtn {
+      color: #4070F4;
+      transition: color 0.3s ease;
+  }
+  
+  .swiper-navBtn:hover {
+      color: #0d48e8;
+  }
+  
+  .swiper-navBtn::before,
+  .swiper-navBtn::after {
+      font-size: 40px;
+  }
+  
+  .swiper-button-next {
+      right: 0;
+  }
+  
+  .swiper-button-prev {
+      left: 0;
+  }
+  
+  .swiper-pagination-bullet {
+      background-color: #6E93f7;
+      opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+      background-color: #4070F4;
+  }
+  
+  .social-media-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px; 
+  }
+  
+  .social-media-icons a{
+      margin: 0 10px;
+  }
+  
+  .social-media-icons i{
+      width: 20px; 
+      height: auto;
+  }
+  
+  .social-media-icons a:hover {
+      transform: scale(1.5); 
+  }
+  
+  .social-media-icons a:hover i {
+      color: #4070F4; 
+  }
+  
+  @media (hover: none) {
+      .social-media-icons a:active {
+          transform: scale(1.5); 
+      }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 786px) {
+      .social-media-icons {
+          justify-content: space-around; 
+          margin-top: 10px; 
+      }
+  
+      .social-media-icons a {
+          margin: 15; 
+      }
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 786px) {
+      .slide-content {
+          margin: 0 10px;
+      }
+      .swiper-navBtn {
+          display: none;
+      }
+  }
+ 
+
+</style>
 
 </head>
 
@@ -42,10 +283,11 @@
                     <li class="dropdown active">
                         <a href="./about.html" class="dropbtn">About</a>
                         <div class="dropdown-content">
-                            <a href="#">About Us</a>
-                            <a href="#">Our Mission</a>
-                            <a href="#">Our Vision</a>
-                            <a href="#">Our Team</a>
+                            <a href="#about">About Us</a>
+                            <a href="#mission">Our Mission</a>
+                            <a href="#vision">Our Vision</a>
+                            <a href="#team">Our Team</a>
+                            <a href="#reviews">Reviews</a>
                         </div></li>
                     </li>
                     <li><a href="./service.html"> Services </a></li>
@@ -68,9 +310,10 @@
                         <a href="#" class="dropbtn">About</a>
                         <div class="dropdown-content">
                             <a href="./about.html">About Us</a>
-                            <a href="#">Our Mission</a>
-                            <a href="#">Our Vision</a>
-                            <a href="#">Our Team</a>
+                            <a href="#mission">Our Mission</a>
+                            <a href="#vision">Our Vision</a>
+                            <a href="#team">Our Team</a>
+                            <a href="#reviews">reviews</a>
                         </div></li>
                     <li><a href="./service.html"> Services </a></li>
                     <li><a href="./blog.html"> Blogs </a></li>
@@ -84,6 +327,12 @@
             <div id="hamburger-cross">&#10006;</div>
         </div>
         <!-- ---------------------------------------------------------  End of navbar  -->
+      
+      
+      
+      
+      
+      
         <div class="about flex" id="about">
             <h1 class="heading">About Us</h1>
 
@@ -98,40 +347,289 @@
                     <span></span>
                 </div>
 
-
+            </div>
             </div>
 
 
-            <div class="mission flex">
-
-                <div class="leftMission flex">
-                    <h1>OUR MISSION</h1>
+                
+           
+            <div class="projects flex">
+                <a href="#mission">
+                    <h2 class="mission-heading">Our Mission</h2>
+                </a>
+                <!-- <div class="projectsContainer"> -->
+                <div class="project-container">
+                
+                    <div class="project-image flex">
+                        <img src="./images/mission.gif" alt="Project Image">
+                    </div>
+    
+                    <div class="project-info">
+                        <h1>Our Visionary Mission</h1>
+                        <p class="description"><b>Innovating Excellence</b>  <ul>
+                            <p>At the forefront of our mission is the commitment to redefining industry standards through pioneering innovation, ensuring we stay ahead in an ever-evolving landscape..</p>
+                        </ul></p>
+                        <p class="technology"><b>Empowering Growth</b> <ul>
+                            <p>
+                                Through the delivery of excellence in software, web, and apps development, alongside unparalleled consulting services, we strive to empower businesses worldwide, driving growth and fostering success in the digital realm.
+                            </p>
+                        </ul></p>
+                           </div>
+                    <!-- </div> -->
                 </div>
-
-                <div class="rightMission flex">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, recusandae repudiandae odio et, praesentium esse deserunt, eligendi reprehenderit aut libero tempore sunt porro repellat totam officia illo? Magnam ducimus tempore tempora commodi inventore, quia natus dolores alias ratione debitis, voluptates officia praesentium deserunt quasi expedita reprehenderit facilis nisi sit fugit, corrupti dolor eius eligendi maiores odit. Reiciendis quos similique quas tenetur ratione! Animi quaerat sunt culpa recusandae velit! 
-                        <br>
-                        Explicabo magni ipsa asperiores doloribus ut, odit odio earum, velit tempore cupiditate eius facilis quam nisi itaque aut amet ad obcaecati consectetur unde! Facere, ducimus quibusdam? Voluptas sit recusandae dicta omnis magnam assumenda quidem corrupti quam libero tempore delectus repellendus esse dignissimos distinctio cum illum obcaecati eius vero aspernatur beatae et saepe, dolores ex culpa! Totam, enim ullam eligendi itaque quos rerum reiciendis dignissimos cupiditate asperiores quasi. Laudantium consequatur omnis quas adipisci optio soluta nesciunt dignissimos maiores magnam amet quidem, illum neque. </p>
+                <br><br><br>
+                <a href="#vision">
+                    <h2 class="mission-heading">Our Vision</h2>
+                </a>
+                <div class="project-container">
+        
+                        <div class="project-image flex">
+                            <img src="./solutions.img/webdgif.gif" alt="Project Image">
+                        </div>
+        
+                        <div class="project-info">
+                            <h1>Our Visionary Horizon</h1>
+                            <p class="description"><b>Inspiring Transformation</b>  <ul>
+                            <p>
+                                Our vision is to envision a future where our pioneering innovation and commitment to excellence propel industries forward, setting new benchmarks and fostering continuous evolution.
+                            </p>    
+                            </ul></p>
+                            <p class="technology"><b>Empowering Solutions</b> <ul>
+                            <p>
+                                Driven by our dedication to empower businesses globally, we envision a landscape where our software, web, and apps development, combined with unmatched consulting services, serve as catalysts for growth, innovation, and enduring success."
+                            </p>    
+                            </ul></p>
+                               </div>
                 </div>
             </div>
-
-            <div class="mission flex">
-
-                <div class="leftMission flex">
-                    <h1>OUR VISION</h1>
                 </div>
 
-                <div class="rightMission flex">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, recusandae repudiandae odio et, praesentium esse deserunt, eligendi reprehenderit aut libero tempore sunt porro repellat totam officia illo? Magnam ducimus tempore tempora commodi inventore, quia natus dolores alias ratione debitis, voluptates officia praesentium deserunt quasi expedita reprehenderit facilis nisi sit fugit, corrupti dolor eius eligendi maiores odit. Reiciendis quos similique quas tenetur ratione! Animi quaerat sunt culpa recusandae velit! 
-                        <br>
-                        Explicabo magni ipsa asperiores doloribus ut, odit odio earum, velit tempore cupiditate eius facilis quam nisi itaque aut amet ad obcaecati consectetur unde! Facere, ducimus quibusdam? Voluptas sit recusandae dicta omnis magnam assumenda quidem corrupti quam libero tempore delectus repellendus esse dignissimos distinctio cum illum obcaecati eius vero aspernatur beatae et saepe, dolores ex culpa! Totam, enim ullam eligendi itaque quos rerum reiciendis dignissimos cupiditate asperiores quasi. Laudantium consequatur omnis quas adipisci optio soluta nesciunt dignissimos maiores magnam amet quidem, illum neque. </p>
-                </div>
-            </div>
-        </div>
+
+
+            
 
        
 
-        
+
+                <a href="#team">
+                    <h2 class="team-heading">Our Team</h2>
+                </a>
+    
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="images/p1.jpg" alt="" class="card-img">
+                            </div>
+    
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aman Pandey</h2>
+                            <p class="description1">Aman is a 25-year-old man who lives in New York City.
+                                 he is a hard worker and is always willing to help others. 
+                                 he is also very creative and enjoys painting and writing.  
+                                 he is a loyal friend and a great listener. </p>
+    
+                                 <button class="button">View More </button>
+                                 <div class="social-media-icons">
+                                    <a href=""><i class="lab la-facebook-f"></i></a>
+                                    <a href=""><i class="lab la-linkedin-in"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg></i></a>
+                                    <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                                    <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="images/p1.jpg" alt="" class="card-img">
+                            </div>
+    
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aman Pandey</h2>
+                            <p class="description1">Aman is a 25-year-old man who lives in New York City.
+                                 he is a hard worker and is always willing to help others. 
+                                 he is also very creative and enjoys painting and writing.  
+                                 he is a loyal friend and a great listener. </p>
+    
+                                 <button class="button">View More</button>
+                                 <div class="social-media-icons">
+                                    <a href=""><i class="lab la-facebook-f"></i></a>
+                                    <a href=""><i class="lab la-linkedin-in"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg></i></a>
+                                    <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                                    <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="images/p1.jpg" alt="" class="card-img">
+                            </div>
+    
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aman Pandey</h2>
+                            <p class="description1">Aman is a 25-year-old man who lives in New York City.
+                                 he is a hard worker and is always willing to help others. 
+                                 he is also very creative and enjoys painting and writing.  
+                                 he is a loyal friend and a great listener. </p>
+    
+                                 <button class="button">View More</button>
+                                 <div class="social-media-icons">
+                                    <a href=""><i class="lab la-facebook-f"></i></a>
+                                    <a href=""><i class="lab la-linkedin-in"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg></i></a>
+                                    <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                                    <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="images/p1.jpg" alt="" class="card-img">
+                            </div>
+    
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aman Pandey</h2>
+                            <p class="description1">Aman is a 25-year-old man who lives in New York City.
+                                 he is a hard worker and is always willing to help others. 
+                                 he is also very creative and enjoys painting and writing.  
+                                 he is a loyal friend and a great listener. </p>
+    
+                                 <button class="button">View More</button>
+                                 <div class="social-media-icons">
+                                    <a href=""><i class="lab la-facebook-f"></i></a>
+                                    <a href=""><i class="lab la-linkedin-in"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg></i></a>
+                                    <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                                    <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="images/p1.jpg" alt="" class="card-img">
+                            </div>
+    
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aman Pandey</h2>
+                            <p class="description1">Aman is a 25-year-old man who lives in New York City.
+                                 he is a hard worker and is always willing to help others. 
+                                 he is also very creative and enjoys painting and writing.  
+                                 he is a loyal friend and a great listener. </p>
+    
+                                 <button class="button">View More</button>
+                                 <div class="social-media-icons">
+                                    <a href=""><i class="lab la-facebook-f"></i></a>
+                                    <a href=""><i class="lab la-linkedin-in"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg></i></a>
+                                    <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                                    <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="images/p1.jpg" alt="" class="card-img">
+                            </div>
+    
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aman Pandey</h2>
+                            <p class="description1">Aman is a 25-year-old man who lives in New York City.
+                                 he is a hard worker and is always willing to help others. 
+                                 he is also very creative and enjoys painting and writing.  
+                                 he is a loyal friend and a great listener. </p>
+    
+                                 <button class="button">View More</button>
+                                 <div class="social-media-icons">
+                                    <a href=""><i class="lab la-facebook-f"></i></a>
+                                    <a href=""><i class="lab la-linkedin-in"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg></i></a>
+                                    <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                                    <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="images/p1.jpg" alt="" class="card-img">
+                            </div>
+    
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aman Pandey</h2>
+                            <p class="description1">Aman is a 25-year-old man who lives in New York City.
+                                 he is a hard worker and is always willing to help others. 
+                                 he is also very creative and enjoys painting and writing.  
+                                 he is a loyal friend and a great listener. </p>
+    
+                                 <button class="button">View More</button>
+                                 <div class="social-media-icons">
+                                    <a href=""><i class="lab la-facebook-f"></i></a>
+                                    <a href=""><i class="lab la-linkedin-in"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg></i></a>
+                                    <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                                    <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+
+    <br>
 
         <!-- <div class="contact flex">
 
@@ -152,6 +650,173 @@
                 </div>
             </div>
         </div> -->
+
+        <!-- <div class="customer-reviews">
+            <a href="#reviews">
+                <h2 class="mission-heading">Reviews</h2>
+            </a>
+    <div class="container">
+    
+        <div class="review">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae nisi eu risus condimentum malesuada. Ut ultricies libero nec nibh tempus, eget venenatis enim ultrices. Praesent feugiat, velit a porta condimentum, libero elit aliquet lectus."</p>
+            <span>- John Doe</span>
+        </div>
+        <div class="review">
+            <p>"Nulla facilisi. Sed scelerisque tincidunt massa, sit amet volutpat velit venenatis eu. Suspendisse potenti. Nam semper, quam ac dignissim aliquet, purus elit tincidunt magna, sit amet viverra magna lacus a lorem."</p>
+            <span>- Jane Smith</span>
+        </div>
+        
+    </div>
+</div> -->
+
+
+<!-- ======================================== 
+          Our Testimonial Section Start  
+    ========================================  -->
+
+    <section class="section section-testimonial ">
+        <div class="container">
+          <h2 class="common-heading">Happy Client works</h2>
+        </div>
+          <!-- Slider main container -->
+          <!-- Swiper -->
+    <div class="swiper mySwiper container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img loading="lazy" src="images/clients/a.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+         <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img loading="lazy" src="images/clients/b.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+         <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img loading="lazy" src="images/clients/c.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+         <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img loading="lazy" src="images/clients/d.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+         <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img src="images/clients/e.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+         <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img src="images/clients/f.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+         <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img src="images/clients/g.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+         <div class="swiper-slide">
+        
+          <div class="swiper-client-msg">
+            <p>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.</p>
+          </div>
+          <div class="swiper-client-data grid grid-two-col ">
+            <figure>
+            <img src="images/clients/h.jpg" alt="">
+            </figure>
+            <div class="client-data-details">
+              <p>Vinod thapa</p>
+              <p>Entrepruner</p>
+            </div>
+          </div>
+        </div>
+        <!-- slide end  -->
+       
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+        </div>
+    </section>
+
 
 
         <footer>
@@ -213,6 +878,7 @@
 
 
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./script.js"></script>
 

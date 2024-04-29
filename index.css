@@ -188,7 +188,42 @@ main .navbar {
   padding: 1rem 1rem;
   top: 0;
   left: 0;
+  height: 90px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/* 
+////////////////////// */
+main .navbar {
+  transition: height 0.3s ease; 
 }
+
+main .navbar.scroll-down {
+  height: 60px; 
+  line-height: 50px; 
+}
+
+main .navbar.scroll-up {
+  height: 80px;
+  line-height: 80px; 
+}
+
+main .nav-button {
+  transition: all 0.3s ease; 
+  text-align: center;
+}
+
+main .nav-button.scroll-down {
+  height: 30px; 
+  line-height: 10px; 
+}
+
+main .nav-button.scroll-up {
+  height: 50px; 
+  line-height: 25px;
+}
+
 
 .nav-items > ul > li.active > a {
   /* Define styles for active navigation item */
@@ -283,6 +318,10 @@ main .nav-button a {
   font-weight: 500;
 }
 
+
+
+
+
 /* Dropdown Button */
 .dropbtn {
   color: #353535;
@@ -302,6 +341,7 @@ main .nav-button a {
   z-index: 1;
   left: 0; /* Added */
   top: calc(100% - 0px); /* Added */
+  width: 160%;
 }
 
 /* Links inside the dropdown */
@@ -1187,7 +1227,7 @@ main .blogPageContainer .blogContainer .card .cardFooter .userInfo > small {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  background-color: #4787e8;; /* White background for the container */
+  background-color: #4569ea;; /* White background for the container */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1560,4 +1600,5 @@ main footer .privacyPolicy p {
 }
 
 
-
+   
+  
