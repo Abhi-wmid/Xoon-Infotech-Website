@@ -55,6 +55,10 @@
 
 body {
   background-color: #0b2545;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .flex {
@@ -223,7 +227,9 @@ main .nav-button.scroll-up {
   height: 50px; 
   line-height: 25px;
 }
-
+select {
+  height: 100px !important;
+}
 
 .nav-items > ul > li.active > a {
   /* Define styles for active navigation item */
