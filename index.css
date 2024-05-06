@@ -1558,7 +1558,7 @@ main .blog .blogContainer .button button.prev {
 }
 main .blog .blogContainer .button button.next {
   right: 0;
-}
+}*/
 main .blogPageContainer {
   display: grid;
   place-items: center;
@@ -1630,7 +1630,7 @@ main .blogPageContainer .blogContainer .card .cardFooter .userImage {
 }
 main .blogPageContainer .blogContainer .card .cardFooter .userInfo > small {
   color: #666;
-} */
+} 
 
 
 .blog {
