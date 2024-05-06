@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="./index.css">
-    <!-- for swiper in our team -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
        
         .mission-heading {
@@ -24,246 +21,7 @@
             /* Adjust margin as needed */
         }
 
-        main footer {
-            border-radius: 0px;
-        }
-
-        /* .customer-reviews {
-    background-color: #fff;
-    padding: 50px 20px;
-}
-
-.customer-reviews .container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.customer-reviews h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.customer-reviews .review {
-    margin-bottom: 20px;
-}
-
-.customer-reviews .review p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.customer-reviews .review span {
-    font-weight: bold;
-} */
-
-        /* css for our team */
-        .team-heading {
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: -20px;
-            color: white;
-        }
-
-
-        .slide-container {
-            max-width: 1120px;
-            width: 100%;
-            padding: 40px 0;
-        }
-
-        .slide-content {
-            margin: 0 40px;
-            overflow: hidden;
-            border-radius: 25px;
-        }
-
-        .card {
-            border-radius: 25px;
-            background-color: #fff;
-        }
-
-        .image-content,
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 14px;
-        }
-
-        .image-content {
-            position: relative;
-            row-gap: 5px;
-            padding: 25px 0;
-        }
-
-        .overlay {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #4070F4;
-            border-radius: 25px 25px 0 25px;
-        }
-
-        .overlay::before,
-        .overlay::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -40px;
-            height: 40px;
-            width: 40px;
-            background-color: #4070F4;
-            border-radius: 0 0 0 70px;
-        }
-
-        .overlay::after {
-            border-radius: 0 25px 0 25px;
-            background-color: white;
-        }
-
-        .card-image {
-            position: relative;
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            background-color: #efefef;
-            padding: 3px;
-        }
-
-        .card-image .card-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #084b9e;
-        }
-
-        .name {
-            font-size: 18px;
-            font-weight: 500;
-            color: black;
-            margin-bottom: 5px;
-            font: bold;
-        }
-        .designation {
-    font-size: 14px; /* Adjust the font size of the designation */
-    color: #888; /* Change the color of the designation */
-    font-weight: bold; /* Make the text bold */
-    margin-bottom: 10px; /* Add space below the designation */
-}
-
-        .description1 {
-            font-size: 14px;
-            color: #32320c;
-            text-align: center;
-        }
-
-        .button {
-            border: none;
-            font-size: 16px;
-            color: #fff;
-            padding: 8px 16px;
-            background-color: #4070F4;
-            border-radius: 6px;
-            margin: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #154dea;
-        }
-
-        .swiper-navBtn {
-            color: #4070F4;
-            transition: color 0.3s ease;
-        }
-
-        .swiper-navBtn:hover {
-            color: #0d48e8;
-        }
-
-        .swiper-navBtn::before,
-        .swiper-navBtn::after {
-            font-size: 40px;
-        }
-
-        .swiper-button-next {
-            right: 0;
-        }
-
-        .swiper-button-prev {
-            left: 0;
-        }
-
-        .swiper-pagination-bullet {
-            background-color: #6E93f7;
-            opacity: 1;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #4070F4;
-        }
-
-        .social-media-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 5px;
-        }
-
-        .social-media-icons a {
-            margin: 0 10px;
-        }
-
-        .social-media-icons i {
-            width: 20px;
-            height: auto;
-        }
-
-        .social-media-icons a:hover {
-            transform: scale(1.5);
-        }
-
-        .social-media-icons a:hover i {
-            color: #4070F4;
-        }
-
-        @media (hover: none) {
-            .social-media-icons a:active {
-                transform: scale(1.5);
-            }
-        }
-
-        /* Media query for mobile devices */
-        @media screen and (max-width: 786px) {
-            .social-media-icons {
-                justify-content: space-around;
-                margin-top: 10px;
-            }
-
-            .social-media-icons a {
-                margin: 15;
-            }
-        }
-
-
-
-
-        @media screen and (max-width: 786px) {
-            .slide-content {
-                margin: 0 10px;
-            }
-
-            .swiper-navBtn {
-                display: none;
-            }
-        }
-
-        /* css for review */
-    </style>
+        </style>
 
 </head>
 
@@ -447,7 +205,7 @@
         <h2 class="team-heading">Our Team</h2>
 
 
-        <div class="slide-container swiper">
+        <div class="swiper slide-container">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
                     <div class="card swiper-slide">
@@ -758,11 +516,11 @@
         <div class="col">
             <h3>Links <div class="bottom_line"><span></span></div></h3>
             <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">SERVICE</a></li>
-                <li><a href="">BLOGS</a></li>
-                <li><a href="">CONTACT US</a></li>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./service.html">SERVICE</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">BLOGS</a></li>
             </ul>
         </div>
         <div class="col">

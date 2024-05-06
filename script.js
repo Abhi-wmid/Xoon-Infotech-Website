@@ -172,12 +172,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function nextSlide() {
       // Implement logic to navigate to the next slide
-      slides.style.transform = 'translateX(-100%)'; // Example: Move to the next slide
+      slides.style.transform = 'translateX(-100%)'; 
   }
 
   function prevSlide() {
-      // Implement logic to navigate to the previous slide
-      slides.style.transform = 'translateX(0)'; // Example: Move to the previous slide
+     
+      slides.style.transform = 'translateX(0)'; 
   }
 });
 
@@ -352,6 +352,54 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
+// swiper reviews
+function myFunction(widthSize) {
+  if (widthSize.matches) {
+      // If media query matches
+      const swiper = new Swiper(".swiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+          },
+
+          pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+          },
+      });
+  } else {
+      const swiper = new Swiper(".swiper", {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+          },
+          pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+          },
+      });
+  }
+}
+
+const widthSize = window.matchMedia("(max-width: 780px)");
+// Call listener function at run time
+myFunction(widthSize);
+
+
+// var swiper = new Swiper('.mySwiper', {
+//     slidesPerView: 'auto',
+//     spaceBetween: 30,
+//     loop: true,
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+// });
+
 
     // navbar srinking
     let lastScrollTop = 0;
@@ -363,16 +411,16 @@ window.addEventListener("scroll", function() {
 
   if (currentScroll > lastScrollTop) {
     // scrolling down
-    navbar.classList.add('scroll-down'); // Add class for scrolling down
-    navbar.classList.remove('scroll-up'); // Remove class for scrolling up
-    contactButton.classList.add('scroll-down'); // Add class for scrolling down
-    contactButton.classList.remove('scroll-up'); // Remove class for scrolling up
+    navbar.classList.add('scroll-down'); 
+    navbar.classList.remove('scroll-up'); 
+    contactButton.classList.add('scroll-down'); 
+    contactButton.classList.remove('scroll-up'); 
   } else {
     // scrolling up
-    navbar.classList.remove('scroll-down'); // Remove class for scrolling down
-    navbar.classList.add('scroll-up'); // Add class for scrolling up
-    contactButton.classList.remove('scroll-down'); // Remove class for scrolling down
-    contactButton.classList.add('scroll-up'); // Add class for scrolling up
+    navbar.classList.remove('scroll-down'); 
+    navbar.classList.add('scroll-up'); 
+    contactButton.classList.remove('scroll-down'); 
+    contactButton.classList.add('scroll-up'); 
   }
 
   // If the user has scrolled to the top of the page, remove the scroll-up class
@@ -384,3 +432,54 @@ window.addEventListener("scroll", function() {
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 });
 
+// for footer subscribe button
+$('#toggle').click(function() {
+  if ($(this).is(":checked")) {
+    $(".sub").css("opacity", 0);
+    $(".thanks").css("opacity", 1);
+  } 
+  else if ($(this).is(":not(:checked)")) {
+     $(".sub").css("opacity", 1);
+     $(".thanks").css("opacity", 0);
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const emailInput = document.getElementById("email-input");
+  const subscribeButton = document.getElementById("submit");
+  const thanksMessage = document.querySelector(".thanks");
+
+  console.log(emailInput);
+  console.log(subscribeButton);
+  console.log(thanksMessage);
+
+  subscribeButton.addEventListener("click", function(event) {
+      event.preventDefault(); 
+
+      console.log("Subscribe button clicked");
+
+      const email = emailInput.value;
+
+      console.log("Email:", email);
+
+      
+      if (validateEmail(email)) {
+          // Here you can add code to process the subscription, like sending the email to your server
+         
+          console.log('Subscribed with email: ' + email);
+          
+        
+          thanksMessage.style.opacity = 1;
+      } else {
+          
+          alert("Please enter a valid email address.");
+      }
+  });
+
+  // Function to validate email format
+  function validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+  }
+});

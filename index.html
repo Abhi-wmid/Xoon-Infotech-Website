@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -232,7 +232,7 @@
 
         </div>
 
-        <div class="blog flex">
+        <div class="blog">
             <h1 class="heading">Blog</h1>
 
             <div class="blogContainer">
@@ -266,7 +266,7 @@
                             </div>
                             <div class="cardBody">
                                 <span class="tag tag-blue">Development</span>
-                                <h4>What's the most secured backend</h4>
+                                <h4>The secured backend</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
                                     doloribus. Doloremque, nihil! At ea atque quidem!</p>
                             </div>
@@ -359,7 +359,7 @@
                 
 
             </div>
-
+            
             <div class="button">
                 <div class="btnContent flex">
                     <a href="./blog.html">More Blogs</a>
@@ -422,11 +422,11 @@
                 <div class="col">
                     <h3>Links <div class="bottom_line"><span></span></div></h3>
                     <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">SERVICE</a></li>
-                        <li><a href="">BLOGS</a></li>
-                        <li><a href="">CONTACT US</a></li>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="./service.html">SERVICE</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./blog.html">BLOGS</a></li>
                     </ul>
                 </div>
                 <div class="col">
@@ -434,9 +434,8 @@
                     <p>Subscribe to our Newsletter</p><br>
                     <form>
                         <ion-icon class="icon" name="mail"></ion-icon>
-                        <input type="email" placeholder="Enter your email" required>
-                        <!-- <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button> -->
-                        
+                        <input type="email" id="email_input" placeholder="Enter your email" required>
+                       
                     </form>
                     <div class="wrap">
                         <div>
@@ -445,7 +444,7 @@
                           </label>
                         </div>
                         <div class="parent">
-                          <div class="text sub">Subscribe Now </div>
+                          <div class="text sub" id="submit">Subscribe Now </div>
                           <div class="text thanks">Thanks for Subscribing </div>
                         </div>
                       </div>
