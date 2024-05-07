@@ -39,6 +39,65 @@
   height: 100%;
   object-fit: cover;
 }
+
+
+/* CSS for regular dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* CSS for nested dropdown aligned to the right */
+.dropdown-submenu-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%; /* Align to the right */
+    min-width: 160px;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content .dropdown-submenu-right a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content .dropdown-submenu-right a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-submenu-right {
+    display: block;
+}
+
         </style>
 </head>
 
@@ -60,7 +119,7 @@
         <div class="navbar">
             <div class="nav-logo">
                 <a href="./index.html">
-                    <img src="./images/Frame 10.png" alt="">
+                    <img src="./images/xoon-RB.png" alt="">
                 </a>
             </div>
             <div class="nav-items">
@@ -74,7 +133,24 @@
                             <a href="#">Our Vision</a>
                             <a href="#">Our Team</a>
                         </div></li>
-                    <li class="active"><a href="./service.html">Services</a></li>
+                        <li class="dropdown active">
+                            <a href="#" class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="#" class="dropbtn-right">Web Development Options</a>
+                                <div class="dropdown-submenu-right">
+                                    <a href="#">Full-stack Development</a>
+                                    <a href="#">Website Design</a>
+                                    <a href="#">e-Commerce Website</a>
+                                    <a href="#">Website Maintenance</a>
+                                    <a href="#">PHP Development</a>
+                                    <a href="#">Static Web services</a>
+                                </div>
+                                <a href="#">App Development</a>
+                                <a href="#">Cloud Solution</a>
+                                <a href="#">IT Consultation</a>
+                                <a href="#">Digital Marketing</a>
+                            </div>
+                        </li>
                     <li><a href="./projects.html"> Projects </a></li>
                     <li><a href="./blog.html">Blogs</a></li>
                 </ul>
@@ -85,6 +161,7 @@
             </div>
             <div id="hamburger-menu">&#9776;</div>
         </div>
+      
 
         <div id="mobile-menu">
             <div class="mobile-nav-items">
@@ -108,6 +185,7 @@
                 <a href="./contact.html">Contact</a>
             </div>
             <div id="hamburger-cross">&#10006;</div>
+            
         </div>
 
         <!-- ---------------------------------------------------------  End of navbar  -->
@@ -465,7 +543,7 @@
     <div class="footer-section">
     <div class="row">
         <div class="col">
-            <img src="./images/Frame 10.png" class="footer_logo">
+            <img src="./images/xoon-RB.png" class="footer_logo">
             <p class="footer_about">We provide best quality of digital products.
                 We provide best quality of digital products.
                 
@@ -497,30 +575,20 @@
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./about.html">ABOUT</a></li>
                 <li><a href="./service.html">SERVICE</a></li>
-                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./projects.html">PROJECTS</a></li>
                 <li><a href="./blog.html">BLOGS</a></li>
             </ul>
         </div>
         <div class="col">
             <h3>Newsletter <div class="bottom_line"><span></span></div></h3>
             <p>Subscribe to our Newsletter</p><br>
-            <form>
-                <ion-icon class="icon" name="mail"></ion-icon>
-                <input type="email" placeholder="Enter your email" required>
-                <!-- <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button> -->
-                
-            </form>
-            <div class="wrap">
-                <div>
-                  <input type="checkbox" id="toggle" />
-                  <label class="button"  for="toggle" >
-                  </label>
-                </div>
-                <div class="parent">
-                  <div class="text sub">Subscribe Now </div>
-                  <div class="text thanks">Thanks for Subscribing </div>
-                </div>
-              </div>
+            
+            <div class="content">
+                <input type="text" class="mail" placeholder="Your email address" name="mail" required>
+                <input type="submit" value="Subscribe" class="subscribe">
+             
+            </div>
+           
         </div>
     </div>
     <hr class="new1">

@@ -2,31 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xoon Infotech</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xoon Infotech</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-<style>
+  <style>
     body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f9fc; /* Lighter blue background */
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      /* Lighter blue background */
+    }
+    .contact-heading {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
 }
-</style>
+
+.contact-heading h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+    .info-box-container {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    margin-bottom: 30px;
+    overflow-x: auto; 
+}
+
+.info-box {
+    width: 260px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    background-color: #e5f1fc; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: -10rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.info-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
+}
+
+.info-box:first-child {
+    margin-left: 0; 
+}
+
+.info-box:last-child {
+    margin-right: 0; 
+}
+
+.info-box .icon {
+    color: #007bff;
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.info-box .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.info-box .content {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+  </style>
 </head>
 
 <body>
 
-    <!-- <section id="loader" class="loader">
+  <!-- <section id="loader" class="loader">
         <div class="heading">
             <h1>Xoon Infotech</h1>
         </div>
@@ -35,259 +103,254 @@
         </div>
     </section> -->
 
+  <main>
+    
+    <!-- ---------------------------------------------------------  start of navbar  -->
+    <div class="navbar">
+      <div class="nav-logo">
+        <a href="./index.html">
+
+          <img src="./images/xoon-RB.png" alt="">
+        </a>
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="./index.html"> Home </a></li>
+          <li class="dropdown">
+            <a href="./about.html" class="dropbtn">About</a>
+            <div class="dropdown-content">
+              <a href="#">About Us</a>
+              <a href="#">Our Mission</a>
+              <a href="#">Our Vision</a>
+              <a href="#">Our Team</a>
+            </div>
+          </li>
+          <li><a href="./service.html"> Services </a></li>
+          <li><a href="./projects.html"> Projects </a></li>
+          <li><a href="./blog.html">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <div class="anim-layer"></div>
+        <a href="./contact.html">Contact</a>
+      </div>
+      <div id="hamburger-menu">&#9776;</div>
+    </div>
+
+    <div id="mobile-menu">
+      <div class="mobile-nav-items">
+        <ul>
+          <li><a href="./index.html"> Home </a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">About</a>
+            <div class="dropdown-content">
+              <a href="./about.html">About Us</a>
+              <a href="#">Our Mission</a>
+              <a href="#">Our Vision</a>
+              <a href="#">Our Team</a>
+            </div>
+          </li>
+          <li><a href="./service.html"> Services </a></li>
+          <li><a href="./blog.html"> Blogs </a></li>
+          <li><a href="./projects.html"> Projects </a></li>
+        </ul>
+      </div>
+      <div class="mobile-nav-button">
+        <div class="anim-layer"></div>
+        <a href="./contact.html">Contact</a>
+      </div>
+      <div id="hamburger-cross">&#10006;</div>
+    </div>
+    <br><br><br><br>
+    <!-- ---------------------------------------------------------  End of navbar  -->
+
     <main>
-        <!-- <svg id="curveLines" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800">
-            <defs>
-                <linearGradient gradientTransform="rotate(270)" x1="50%" y1="0%" x2="50%" y2="100%"
-                    id="sssquiggly-grad">
-                    <stop stop-color="hsl(206, 75%, 49%)" stop-opacity="1" offset="0%"></stop>
-                    <stop stop-color="hsl(331, 90%, 56%)" stop-opacity="1" offset="100%"></stop>
-                </linearGradient>
-            </defs>
-            <g stroke-width="1.5" stroke="url(#sssquiggly-grad)" fill="none" stroke-linecap="round"
-                transform="matrix(1,0,0,1,-5,-123.48990249633789)">
-                
-                <path
-                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
-                    transform="matrix(1,0,0,1,0,648)"></path>
-                <path
-                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
-                    transform="matrix(1,0,0,1,0,594)"></path>
-                <path
-                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
-                    transform="matrix(1,0,0,1,0,540)"></path>
-                <path
-                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
-                    transform="matrix(1,0,0,1,0,486)"></path>
-                <path
-                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
-                    transform="matrix(1,0,0,1,0,432)"></path>
-                <path
-                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
-                    transform="matrix(1,0,0,1,0,378)"></path>
-                <path
-                    d="M10,10C24.583333333333332,11.458333333333334,48.75,20.541666666666668,80,17C111.25,13.458333333333332,126.66666666666666,-6.791666666666667,160,-7C193.33333333333334,-7.208333333333333,206.66666666666666,16.208333333333332,240,16C273.3333333333333,15.791666666666666,286.6666666666667,-9.666666666666666,320,-8C353.3333333333333,-6.333333333333334,366.6666666666667,22.958333333333332,400,24C433.3333333333333,25.041666666666668,446.6666666666667,-4.041666666666667,480,-3C513.3333333333334,-1.9583333333333333,526.6666666666666,27.541666666666668,560,29C593.3333333333334,30.458333333333332,606.6666666666666,4,640,4C673.3333333333334,4,686.6666666666666,28.375,720,29C753.3333333333334,29.625,783.3333333333334,11.583333333333332,800,7"
-                    transform="matrix(1,0,0,1,0,324)"></path>
-            </g>
-        </svg> -->
+      <div class="contact-heading">
+        <h2>Contact us</h2>
+    </div>
 
-        <!-- ---------------------------------------------------------  start of navbar  -->
-        <div class="navbar">
-            <div class="nav-logo">
-                <a href="./index.html">
-
-                    <img src="./images/Frame 10.png" alt="">
-                </a>
-            </div>
-            <div class="nav-items">
-                <ul>
-                    <li><a href="./index.html"> Home </a></li>
-                    <li class="dropdown">
-                        <a href="./about.html" class="dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="#">About Us</a>
-                            <a href="#">Our Mission</a>
-                            <a href="#">Our Vision</a>
-                            <a href="#">Our Team</a>
-                        </div></li>
-                    <li><a href="./service.html"> Services </a></li>
-                    <li><a href="./projects.html"> Projects </a></li>
-                    <li><a href="./blog.html">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="nav-button">
-                <div class="anim-layer"></div>
-                <a href="./contact.html">Contact</a>
-            </div>
-            <div id="hamburger-menu">&#9776;</div>
+      <div class="info-box-container">
+        <div class="info-box">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <div class="title">Opening Hours</div>
+            <div class="content">Monday - Friday<br> (9:00 AM to 5:00 PM)</div>
         </div>
 
-        <div id="mobile-menu">
-            <div class="mobile-nav-items">
-                <ul>
-                    <li><a href="./index.html"> Home </a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="./about.html">About Us</a>
-                            <a href="#">Our Mission</a>
-                            <a href="#">Our Vision</a>
-                            <a href="#">Our Team</a>
-                        </div></li>
-                    <li><a href="./service.html"> Services </a></li>
-                    <li><a href="./blog.html"> Blogs </a></li>
-                    <li><a href="./projects.html"> Projects </a></li>
-                </ul>
-            </div>
-            <div class="mobile-nav-button">
-                <div class="anim-layer"></div>
-                <a href="./contact.html">Contact</a>
-            </div>
-            <div id="hamburger-cross">&#10006;</div>
-        </div>
-         <br><br><br><br>
-        <!-- ---------------------------------------------------------  End of navbar  -->
+        <div class="info-box" onclick="openPhone()">
+          <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="title">Phone</div>
+          <div class="content">+919000000000</div>
+      </div>
+      
+      <div class="info-box" onclick="openEmail()">
+          <div class="icon"><i class="far fa-envelope"></i></div>
+          <div class="title">Email</div>
+          <div class="content">xooninfotech@gmail.com</div>
+      </div>
+      
+      <div class="info-box" onclick="openAddress()">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="title">Address</div>
+          <div class="content">0000 xyz Street, Delhi, 200000, India</div>
+      </div>
+      
+    </div>
 
-        <main>
 
-            <div class="contact-page">
-                <div class="contact-box">
-                  <h2>Send us a message</h2>
-                  <div class="contact-content">
-                    <div class="contact-form">
-                      <form>
-                        <div>
-                          <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div>
-                          <input type="email" class="form-control" placeholder="E-mail">
-                        </div>
-                        <div>
-                          <input type="tel" class="form-control" placeholder="Phone">
-                        </div>
-                        <div>
-                          <textarea rows="5" placeholder="Message" class="form-control"></textarea>
-                        </div>
-                        <input type="submit" class="send-btn" value="Send Message">
-                      </form>
-                    </div>
-                    <div class="contact-image">
-                      <img src="./images/contactt.gif" alt="">
-                    </div>
-                  </div>
-                  <div class="contact-body">
-                    <div class="contact-info">
-                      <div>
-                        <span><i class="fas fa-mobile-alt"></i></span>
-                        <span>Phone No.</span>
-                        <span class="text">+919000000000</span>
-                      </div>
-                      <div>
-                        <span><i class="fas fa-envelope-open"></i></span>
-                        <span>E-mail</span>
-                        <span class="text">xooninfotech@gmail.com</span>
-                      </div>
-                      <div>
-                        <span><i class="fas fa-map-marker-alt"></i></span>
-                        <span>Address</span>
-                        <span class="text">0000 xyz Street, DElhi, 200000, India</span>
-                      </div>
-                      <div>
-                        <span><i class="fas fa-clock"></i></span>
-                        <span>Opening Hours</span>
-                        <span class="text">Monday - Friday (9:00 AM to 5:00 PM)</span>
-                      </div>
-                    </div>
-                  </div>
+
+      <div class="contact-page">
+        <div class="contact-box">
+          <h2>Send us a message</h2>
+          <div class="contact-content">
+            <div class="contact-form">
+              <form>
+                <div>
+                  <input type="text" class="form-control" placeholder="Your Name">
                 </div>
+                <div>
+                  <input type="email" class="form-control" placeholder="E-mail">
+                </div>
+                <div>
+                  <input type="tel" class="form-control" placeholder="Phone">
+                </div>
+                <div>
+                  <textarea rows="5" placeholder="Message" class="form-control"></textarea>
+                </div>
+                <input type="submit" class="send-btn" value="Send Message">
+              </form>
+            </div>
+            <div class="contact-image">
+              <img src="./images/contactt.gif" alt="">
+            </div>
+          </div>
+         
+          </div>
+        </div>
+      </div>
+      
+      <br><br><br>
+      <footer>
+        <div class="footer-section">
+          <div class="row">
+            <div class="col">
+              <img src="./images/xoon-RB.png" class="footer_logo">
+              <p class="footer_about">We provide best quality of digital products.
+                We provide best quality of digital products.
+
+                We provide best quality of digital products.
+                Get in touch
+              </p>
+              <div class="icons flex social-media-icons">
+                <a href=""><i class="lab la-facebook-f"></i></a>
+                <a href=""><i class="lab la-linkedin-in"></i></a>
+                <a href=""><i class="bi bi-twitter-x">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-twitter-x" viewBox="0 0 16 16">
+                      <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg></i></a>
+                <a href="" target="_blank"><i class="lab la-instagram"></i></a>
+                <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
               </div>
-        <br><br><br>
-              <footer>
-                <div class="footer-section">
-                <div class="row">
-                    <div class="col">
-                        <img src="./images/Frame 10.png" class="footer_logo">
-                        <p class="footer_about">We provide best quality of digital products.
-                            We provide best quality of digital products.
-                            
-                            We provide best quality of digital products.
-                            Get in touch                                                                                
-                        </p>
-                        <div class="icons flex social-media-icons">
-                            <a href=""><i class="lab la-facebook-f"></i></a>
-                            <a href=""><i class="lab la-linkedin-in"></i></a>
-                            <a href=""><i class="bi bi-twitter-x">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                            </svg></i></a>
-                            <a href="" target="_blank"><i class="lab la-instagram"></i></a>
-                            <a href="" target="_blank"><i class="lab la-whatsapp"></i></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3>Address <div class="bottom_line"><span></span></div></h3>
-                        <p>0000 Romes Main Road</p>
-                        <p>Delhi</p>
-                        <p>Delhi, pin 200000, India</p>
-                        <p class="footer_email">xooninfotach@gamil.com</p>
-                        <h4>+91 9000000000</h4>
-                    </div>
-                    <div class="col">
-                        <h3>Links <div class="bottom_line"><span></span></div></h3>
-                        <ul>
-                            <li><a href="./index.html">HOME</a></li>
-                            <li><a href="./about.html">ABOUT</a></li>
-                            <li><a href="./service.html">SERVICE</a></li>
-                            <li><a href="./projects.html">Projects</a></li>
-                            <li><a href="./blog.html">BLOGS</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Newsletter <div class="bottom_line"><span></span></div></h3>
-                        <p>Subscribe to our Newsletter</p><br>
-                        <form>
-                            <ion-icon class="icon" name="mail"></ion-icon>
-                            <input type="email" placeholder="Enter your email" required>
-                            <!-- <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button> -->
-                            
-                        </form>
-                        <div class="wrap">
-                            <div>
-                              <input type="checkbox" id="toggle" />
-                              <label class="button"  for="toggle" >
-                              </label>
-                            </div>
-                            <div class="parent">
-                              <div class="text sub">Subscribe Now </div>
-                              <div class="text thanks">Thanks for Subscribing </div>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-                <hr class="new1">
-                <p class="copyright">© Xoon Infotech and Consulting Pvt Ltd.</p>
             </div>
-             </footer> 
+            <div class="col">
+              <h3>Address <div class="bottom_line"><span></span></div>
+              </h3>
+              <p>0000 Romes Main Road</p>
+              <p>Delhi</p>
+              <p>Delhi, pin 200000, India</p>
+              <p class="footer_email">xooninfotach@gamil.com</p>
+              <h4>+91 9000000000</h4>
+            </div>
+            <div class="col">
+              <h3>Links <div class="bottom_line"><span></span></div>
+              </h3>
+              <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./service.html">SERVICE</a></li>
+                <li><a href="./projects.html">PROJECTS</a></li>
+                <li><a href="./blog.html">BLOGS</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3>Newsletter <div class="bottom_line"><span></span></div>
+              </h3>
+              <p>Subscribe to our Newsletter</p><br>
+
+              <div class="content">
+                <input type="text" class="mail" placeholder="Your email address" name="mail" required>
+                <input type="submit" value="Subscribe" class="subscribe">
+
+              </div>
+
+            </div>
+          </div>
+          <hr class="new1">
+          <p class="copyright">© Xoon Infotech and Consulting Pvt Ltd.</p>
+        </div>
+      </footer>
 
 
-
-<!-- scrollUpIco -->
-<div class="scrollthepage">
-<div id="scroll-up-icon">
-    <a href="#" class="scroll-up-link">&#9650;</a>
-</div>
-</div>
-                 <!-- scrollUpIco -->
+      <!-- scrollUpIco -->
+      <div class="scrollthepage">
+        <div id="scroll-up-icon">
+          <a href="#" class="scroll-up-link">&#9650;</a>
+        </div>
+      </div>
+      <!-- scrollUpIco -->
 
     </main>
 
     <script src="./script.js"></script>
     <script>
-           // Validate form inputs on submit
-document.querySelector('form').addEventListener('submit', function(event) {
-  // Prevent form submission
-  event.preventDefault();
+      // Validate form inputs on submit
+      document.querySelector('form').addEventListener('submit', function (event) {
+        // Prevent form submission
+        event.preventDefault();
 
-  // Validate form inputs
-  var inputs = document.querySelectorAll('.form-control');
-  var isValid = true;
+        // Validate form inputs
+        var inputs = document.querySelectorAll('.form-control');
+        var isValid = true;
 
-  inputs.forEach(function(input) {
-    if (input.value.trim() === '') {
-      isValid = false;
-      input.classList.add('error');
+        inputs.forEach(function (input) {
+          if (input.value.trim() === '') {
+            isValid = false;
+            input.classList.add('error');
+          } else {
+            input.classList.remove('error');
+          }
+        });
+
+        // If form is valid, submit it
+        if (isValid) {
+          // Your form submission logic here
+          console.log('Form submitted successfully!');
+        }
+      });
+
+
+      function openPhone() {
+    var currentHour = new Date().getHours();
+    var openingHour = 9; // Assuming opening hour is 9 AM
+    var closingHour = 17; // Assuming closing hour is 5 PM
+
+    if (currentHour >= openingHour && currentHour < closingHour) {
+        window.location.href = "tel:+919000000000";
     } else {
-      input.classList.remove('error');
+        alert("Please call during opening hours (9:00 AM to 5:00 PM).");
     }
-  });
+}
 
-  // If form is valid, submit it
-  if (isValid) {
-    // Your form submission logic here
-    console.log('Form submitted successfully!');
-  }
-});
+
+function openEmail() {
+    window.location.href = "mailto:xooninfotech@gmail.com";
+}
+
+function openAddress() {
+    window.open("https://maps.google.com/maps?q=0000+xyz+Street,+Delhi,+200000,+India");
+}
+
     </script>
 
 </body>
