@@ -1274,6 +1274,7 @@ main .projects .project-info p {
 .container1 {
   max-width: 100rem;
   margin: 0 auto;
+  margin-top: -8rem;
 }
 
 .container1 p {
@@ -2138,20 +2139,20 @@ textarea {
 
 .what-we-do {
   text-align: center;
-  margin:  10px;
+  margin-top: 4rem;
   padding: 0;
 }
 
 .what-we-do h4 {
   font-size: 24px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   color: #333;
 }
 
 .what-we-do h3 {
   font-size: 20px;
   color: black;
-  margin-bottom: 0px;
+  
   
 }
 
@@ -2342,6 +2343,68 @@ textarea {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
 }
+.contactus-heading {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.contactus-heading h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.info-box-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows boxes to wrap to the next line on smaller screens */
+  justify-content: center; /* Center the boxes */
+  margin: 0 auto 30px; /* Center and adjust bottom margin */
+  max-width: 1000px; /* Adjust max-width as needed */
+  padding: 0 10px; /* Add some padding to the sides */
+}
+
+.info-box {
+  width: calc(25% - 20px); /* Adjust width for three boxes in a row with some spacing */
+  min-width: 220px; /* Set minimum width */
+  max-width: 350px; /* Set maximum width */
+  height: 150px; /* Adjust height as needed */
+  background-color: #e5f1fc; /* Light blue background */
+  padding: 20px;
+  border-radius: 10px;
+  margin:0 10px 0px; /* Adjust margin for spacing */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.info-box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
+}
+
+.info-box .icon {
+  color: #007bff;
+  font-size: 28px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.info-box .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.info-box .content {
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .info-box {
+      width: calc(50% - 20px); /* Adjust width for two boxes in a row with some spacing */
+  }
+}
+
+
 .contact-page .contact-box {
     width: 85%;
     margin: 0 auto;
@@ -2592,7 +2655,6 @@ textarea {
 }
 .footer-section .footer_email{
     width: fit-content;
-    /* border-bottom: 1px solid darkblue; */
     margin: 10px 0;
 }
 .footer-section .col ul li{
@@ -2622,66 +2684,19 @@ textarea {
     border: 0;
     outline: none;
 }
-/* .footer-section .col form button{
-    background: transparent;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-} */
-/* .footer-section .col form button .icon_right{
-    font-size: 26px;
-    color: #760909;
-} */
-/* input[type=submit] {
+
+/* .footer-section hr.new1 {
     width: 100%;
-    padding: 12px;
-    margin: 0px 0;
-    margin-top: 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    border: none;
-  }
-  
-  input[type=submit]:hover {
-    opacity: 0.8;
-  } */
-
-.footer-section .hr.new1 {
-    width: 90%;
     border: 0;
-    border-bottom: 2px solid black;
-    margin: 20px auto;
-}
+    border-bottom: 1px solid rgb(148, 53, 53);
+    margin: auto;
+    box-shadow: #fff;
+} */
 footer .copyright{
     text-align: center;
     
 }
-/* .footer-section .bottom_line{
-    width: 100%;
-    height: 5px;
-    background: #767676;
-    border-radius: 3px;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    overflow: hidden;
-} */
- /* .footer-section .bottom_line span{
-    width: 15px;
-    height: 100%;
-    background: darkblue;
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    animation: moveline 2s linear infinite; 
-} */
+
 @keyframes moveline{
     0%{
         left:-20px;
@@ -2719,19 +2734,62 @@ footer .copyright{
   border: none;
   border-radius: 0.5em;
   width: 120%;
+  cursor: pointer;
   /* margin-bottom: 1.3em; */
 }
-
+.footer-section .subscribe:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
+  background-color: #f34138;
+}
 .footer-section .text {
   font-size: 0.9rem;
   width: 90%;
   text-align: center;
 }
-.footer-section .icons {
+
+  @media screen and (max-width: 768px) {
+    .footer-section .content {
+      padding: 0 1em; /* Adjust padding for smaller screens */
+    }
+    .footer-section .text {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-section .mail {
+      width: 200%; /* Adjust width for smaller screens */
+      flex: 1; /* Equal width for both inputs */
+      margin: 1.5em; /* Adjust margin between inputs */
+      margin-left: 15rem;
+    }
+  
+    .footer-section .subscribe {
+      width: 200%; /* Adjust width for smaller screens */
+      flex: 1; /* Equal width for both inputs */
+      margin: 0.5em; /* Adjust margin between inputs */
+      margin-left: 13rem;
+      
+    
+    }
+  
+    .footer-section .text {
+      width: 100%; /* Adjust width for smaller screens */
+      
+    }
+  
+    .footer-section .icons {
+      width: 100%; /* Adjust width for smaller screens */
+      justify-content: center; /* Center icons on smaller screens */
+    }
+  }
+
+  .footer-section .icons {
     width: 80%;
     display: flex;
     align-items: center;
   }
+
 .footer-section .icons a i {
     font-size: 32px;
     text-decoration: none;
@@ -2781,7 +2839,7 @@ footer .copyright{
     }
   
     .footer-section .social-media-icons a {
-        margin: 15; 
+        margin: 15px; 
     }
   }
   
