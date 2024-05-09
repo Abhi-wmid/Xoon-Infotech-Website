@@ -42,7 +42,7 @@
 
 
 /* CSS for regular dropdown */
-.dropdown {
+ /* .dropdown {
     position: relative;
     display: inline-block;
 }
@@ -69,34 +69,9 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
-/* CSS for nested dropdown aligned to the right */
-.dropdown-submenu-right {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 100%; /* Align to the right */
-    min-width: 160px;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-.dropdown-content .dropdown-submenu-right a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content .dropdown-submenu-right a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-submenu-right {
-    display: block;
-}
 
         </style>
 </head>
@@ -125,30 +100,34 @@
             <div class="nav-items">
                 <ul>
                     <li><a href="./index.html"> Home </a></li>
-                    <li class="dropdown">
+                    <li class="dropdown dropdown-menu">
                         <a href="./about.html" class="dropbtn">About</a>
                         <div class="dropdown-content">
-                            <a href="./about.html">About Us</a>
-                            <a href="#mission">Our Mission</a>
-                            <a href="#">Our Vision</a>
-                            <a href="#">Our Team</a>
+                            <a href="./about.html#about">About Us</a>
+                            <a href="./about.html#mission">Our Mission</a>
+                            <a href="./about.html#vision">Our Vision</a>
+                            <a href="./about.html#team">Our Team</a>
                         </div></li>
-                        <li class="dropdown active">
-                            <a href="#" class="dropbtn">Services</a>
+                        <li class="dropdown active dropdown-menu">
+                            <a href="./service.html" class="dropbtn">Services</a>
                             <div class="dropdown-content">
-                                <a href="#" class="dropbtn-right">Web Development Options</a>
-                                <div class="dropdown-submenu-right">
-                                    <a href="#">Full-stack Development</a>
-                                    <a href="#">Website Design</a>
-                                    <a href="#">e-Commerce Website</a>
-                                    <a href="#">Website Maintenance</a>
-                                    <a href="#">PHP Development</a>
-                                    <a href="#">Static Web services</a>
+                                <a href="softwaredev.html">Software Development</a>
+                                <div class="sub-dropdown">
+                                    <a href="webdev.html">Web Development <span class="arrow">&#9656;</span></a>
+                                    <div class="sub-dropdown-content">
+                                        <a href="#">Web Design</a>
+                                        <a href="#">Ecommerce Development</a>
+                                        <a href="#">CMS Development</a>
+                                        <a href="#">PHP Development</a>
+                                        <a href="#">Node JS Development</a>
+                                        <a href="#">React JS Development</a>
+                                    </div>
                                 </div>
-                                <a href="#">App Development</a>
-                                <a href="#">Cloud Solution</a>
-                                <a href="#">IT Consultation</a>
-                                <a href="#">Digital Marketing</a>
+                                <a href="appdev.html">Mobile Apps Development</a>
+                                <a href="cloudsolution.html">Cloud Solution</a>
+                                <a href="itconsulting.html">IT Consultation</a>
+                                <a href="digitalmarketing.html">Digital Marketing</a>
+                                <a href="digitalmarketing.html">Data Solutions</a>
                             </div>
                         </li>
                     <li><a href="./projects.html"> Projects </a></li>
@@ -167,15 +146,36 @@
             <div class="mobile-nav-items">
                 <ul>
                     <li><a href="./index.html"> Home </a></li>
-                    <li class="dropdown">
+                    <li class="dropdown dropdown-menu">
                         <a href="./about.html" class="dropbtn">About</a>
                         <div class="dropdown-content">
-                            <a href="./about.html">About Us</a>
-                            <a href="#">Our Mission</a>
-                            <a href="#">Our Vision</a>
-                            <a href="#">Our Team</a>
+                            <a href="./about.html#about">About Us</a>
+                            <a href="./about.html#mission">Our Mission</a>
+                            <a href="./about.html#vision">Our Vision</a>
+                            <a href="./about.html#team">Our Team</a>
                         </div></li>
-                    <li class="active"><a href="./service.html"> Services </a></li>
+                        <li class="dropdown active">
+                            <a href="./service.html" class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="softwaredev.html">Software Development</a>
+                                <div class="sub-dropdown">
+                                    <a href="webdev.html">Web Development <span class="arrow">&#9656;</span></a>
+                                    <div class="sub-dropdown-content">
+                                        <a href="#">Web Design</a>
+                                        <a href="#">Ecommerce Development</a>
+                                        <a href="#">CMS Development</a>
+                                        <a href="#">PHP Development</a>
+                                        <a href="#">Node JS Development</a>
+                                        <a href="#">React JS Development</a>
+                                    </div>
+                                </div>
+                                <a href="appdev.html">Mobile Apps Development</a>
+                                <a href="cloudsolution.html">Cloud Solution</a>
+                                <a href="itconsulting.html">IT Consultation</a>
+                                <a href="digitalmarketing.html">Digital Marketing</a>
+                                <a href="digitalmarketing.html">Data Solutions</a>
+                            </div>
+                        </li>
                     <li><a href="./blog.html"> Blogs </a></li>
                     <li><a href="./projects.html"> Projects </a></li>
                 </ul>
@@ -203,37 +203,79 @@
                 <div class="service card1">
                     <img src="solutions.img/softdev.png" alt="Software Development Icon">
                     <h2>Software Development</h2>
-                    <p>We provide cutting-edge software solutions tailored to your needs.</p>
+                    <p>cutting-edge software solutions tailored to your needs.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-angle-right"></i> Web Application Development</li>
+                        <li><i class="fas fa-angle-right"></i> AI & ML - Python, TensorFlow</li>
+                        <li><i class="fas fa-angle-right"></i> MEAN/MERN Stack Development</li>
+                        <li><i class="fas fa-angle-right"></i> BlockChain Development</li>
+                        <li><i class="fas fa-angle-right"></i> IoT Applications</li>
+                    </ul>
                 </div>
         
                 <div class="service card1">
                     <img src="solutions.img/webdev.png" alt="Web Development Icon">
                     <h2>Web Development</h2>
                     <p>Create stunning websites with our expertise in web development.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-angle-right"></i> CMS Development</li>
+                        <li><i class="fas fa-angle-right"></i> Ecommerce Development</li>
+                        <li><i class="fas fa-angle-right"></i> Node JS Development</li>
+                        <li><i class="fas fa-angle-right"></i> Angular Development</li>
+                        <li><i class="fas fa-angle-right"></i> React JS Development</li>
+                    </ul>
                 </div>
         
                 <div class="service card1">
                     <img src="solutions.img/mobapp.png" alt="Mobile App Development">
                     <h2>Mobile App Development</h2>
                     <p>Transform your ideas into innovative mobile applications.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-angle-right"></i> Android App Development</li>
+                        <li><i class="fas fa-angle-right"></i> iOS App Development</li>
+                        <li><i class="fas fa-angle-right"></i> React Native Apps</li>
+                        <li><i class="fas fa-angle-right"></i> Ionic App Development</li>
+                        <li><i class="fas fa-angle-right"></i> Phone Gap Apps</li>
+                    </ul>
                 </div>
         
                 <div class="service card1">
                     <img src="solutions.img/itcon.png" alt="IT Consulting">
                     <h2>IT Consulting</h2>
                     <p>Get expert guidance and support for your IT projects.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-angle-right"></i> IT Strategy Consulting</li>
+                        <li><i class="fas fa-angle-right"></i> IT Infrastructure Consulting</li>
+                        <li><i class="fas fa-angle-right"></i> Cybersecurity Consulting</li>
+                        <li><i class="fas fa-angle-right"></i> Cloud Computing Consulting</li>
+                        <li><i class="fas fa-angle-right"></i> IT Project Management</li>
+                    </ul>
                 </div>
         
                 <div class="service card1">
                     <img src="solutions.img/clouds.png" alt="Cloud Solutions">
                     <h2>Cloud Solutions</h2>
                     <p>Take advantage of scalable and secure cloud solutions.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-angle-right"></i> Cloud Migration Services</li>
+                        <li><i class="fas fa-angle-right"></i> Cloud Infrastructure Management</li>
+                        <li><i class="fas fa-angle-right"></i> Cloud Security Solutions</li>
+                        <li><i class="fas fa-angle-right"></i> Cloud Backup and Recovery</li>
+                        <li><i class="fas fa-angle-right"></i> Hybrid Cloud Solutions</li>
+                    </ul>
                 </div>
         
                 <div class="service card1">
                     <img src="solutions.img/digiti.png" alt="Digital Marketing">
                     <h2>Digital Marketing</h2>
                     <p>Boost your online presence and reach your target audience effectively.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-angle-right"></i> Inbound Marketing</li>
+                        <li><i class="fas fa-angle-right"></i> Search Engine Optimization (SEO)</li>
+                        <li><i class="fas fa-angle-right"></i> Social Media Marketing</li>
+                        <li><i class="fas fa-angle-right"></i> Email Marketing</li>
+                        <li><i class="fas fa-angle-right"></i> Analytics Consultation</li>
+                    </ul>
                 </div>
             </section>
         

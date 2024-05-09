@@ -15,7 +15,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+<style>
+    /* styles.css */
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.intro {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro h1 {
+    margin-top: 0;
+}
+
+#approach, #tech-stacks, #services, #why-antino, #team, #faq {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#approach h2, #tech-stacks h2, #services h2, #why-antino h2, #team h2, #faq h2 {
+    color: #007bff;
+}
+
+.approach-step h3, .service h3, .reason h3 {
+    color: #333;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+</style>
 </head>
 
 <body>
@@ -32,7 +85,7 @@
     <main>
         
         <!-- ---------------------------------------------------------  start of navbar  -->
-       <div class="navbar">
+        <div class="navbar">
             <div class="nav-logo">
                 <a href="./index.html">
                     <img src="./images/xoon-RB.png" alt="">
@@ -49,7 +102,7 @@
                             <a href="./about.html#vision">Our Vision</a>
                             <a href="./about.html#team">Our Team</a>
                         </div></li>
-                        <li class="dropdown">
+                        <li class="dropdown active dropdown-menu">
                             <a href="./service.html" class="dropbtn">Services</a>
                             <div class="dropdown-content">
                                 <a href="softwaredev.html">Software Development</a>
@@ -72,7 +125,7 @@
                             </div>
                         </li>
                     <li><a href="./projects.html"> Projects </a></li>
-                    <li class="active"><a href="./blog.html">Blogs</a></li>
+                    <li><a href="./blog.html">Blogs</a></li>
                 </ul>
             </div>
             <div class="nav-button">
@@ -95,7 +148,7 @@
                             <a href="./about.html#vision">Our Vision</a>
                             <a href="./about.html#team">Our Team</a>
                         </div></li>
-                        <li class="dropdown">
+                        <li class="dropdown active">
                             <a href="./service.html" class="dropbtn">Services</a>
                             <div class="dropdown-content">
                                 <a href="softwaredev.html">Software Development</a>
@@ -117,7 +170,7 @@
                                 <a href="digitalmarketing.html">Data Solutions</a>
                             </div>
                         </li>
-                    <li class="active"><a href="./blog.html"> Blogs </a></li>
+                    <li><a href="./blog.html"> Blogs </a></li>
                     <li><a href="./projects.html"> Projects </a></li>
                 </ul>
             </div>
@@ -128,86 +181,75 @@
             <div id="hamburger-cross">&#10006;</div>
             
         </div>
+
         <!-- ---------------------------------------------------------  End of navbar  -->
-        <div class="blogPageContainer flex">
-            <h1 class="heading">Blog</h1>
+       
 
-            <!-- <div class="projectsContainer"> -->
-            <div class="blogContainer">
 
-                <div class="card">
-                    <div class="card__header">
-                        <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image"
-                            width="600">
-                    </div>
-                    <div class="cardBody">
-                        <span class="tag tag-blue">Technology</span>
-                        <h4>What's new in 2022 Tech</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                            doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                    </div>
-                    <div class="cardFooter">
-                        <div class="user">
-                            <img src="https://i.pravatar.cc/40?img=1" alt="userImage" class="userImage">
-                            <div class="userInfo">
-                                <h5>Jane Doe</h5>
-                                <small>2h ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img src="https://source.unsplash.com/600x400/?technology" alt="card__image" class="card__image"
-                            width="600">
-                    </div>
-                    <div class="cardBody">
-                        <span class="tag tag-blue">Development</span>
-                        <h4>What's the most secured backend</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                            doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                    </div>
-                    <div class="cardFooter">
-                        <div class="user">
-                            <img src="https://i.pravatar.cc/40?img=2" alt="userImage" class="userImage">
-                            <div class="userInfo">
-                                <h5>Jony Doe</h5>
-                                <small>Yesterday</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img src="https://source.unsplash.com/600x400/?coding" alt="card__image" class="card__image"
-                            width="600">
-                    </div>
-                    <div class="cardBody">
-                        <span class="tag tag-blue">Web Development</span>
-                        <h4>Introduce web3</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                            doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                    </div>
-                    <div class="cardFooter">
-                        <div class="user">
-                            <img src="https://i.pravatar.cc/40?img=3" alt="userImage" class="userImage">
-                            <div class="userInfo">
-                                <h5>John Doe</h5>
-                                <small>2d ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-            
-        </div>
-        <div class="swiper-pagination"></div>
 
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
 
-  
+
+
+<br><br><br><br><br><br>
+
+
+<div class="intro">
+    <h1>Our Approach to Mobile App Development</h1>
+    <p>Unveiling our methodology for building a solid foundation of unique and strategic applications for diverse industries worldwide.</p>
+</div>
+
+<section id="approach">
+    <h2>Our Approach</h2>
+    <div class="approach-step">
+        <h3>Planning</h3>
+        <p>At Antino, we understand that every business is unique. That's why we offer a customized app development plan that is tailor-made to meet your specific requirements.</p>
+    </div>
+    <!-- Similar divs for other approach steps -->
+</section>
+
+<section id="tech-stacks">
+    <h2>Next-Gen Tech Stacks We Use</h2>
+    <ul>
+        <li>React js</li>
+        <li>Javascript</li>
+        <li>Flutter</li>
+        <li>Kotlin</li>
+        <li>Python</li>
+        <li>Swift</li>
+    </ul>
+</section>
+
+<section id="services">
+    <h2>Application Development Services and Solutions We Offer</h2>
+    <div class="service">
+        <h3>End-To-End Application Development</h3>
+        <p>Our expert team combines cutting-edge technologies and agile methodologies to ensure seamless development, ensuring clients receive efficient, scalable, and innovative applications to stay ahead in the competitive market.</p>
+    </div>
+    <!-- Similar divs for other services -->
+</section>
+
+<section id="why-antino">
+    <h2>Why is Antino the Preferred App Development Company?</h2>
+    <div class="reason">
+        <h3>Reshaping The Future</h3>
+        <p>Embracing Unification</p>
+    </div>
+    <!-- Similar divs for other reasons -->
+</section>
+
+
+
+
+
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <!-- Add FAQ content here -->
+</section>
+
+
+
+        
 
 
 <footer>

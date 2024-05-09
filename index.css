@@ -193,7 +193,12 @@ main .navbar {
   height: 90px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+  @media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem; /* Smaller padding */
+    height: 20px; /* Smaller height */
+  }
+}
 
 /* 
 ////////////////////// */
@@ -231,11 +236,6 @@ main .nav-button.scroll-up {
   /* Define styles for active navigation item */
   color: #4787e8; /* Example: Change text color */
   font-weight: bold; /* Example: Make font bold */
-}
-@media only screen and (min-width: 768px) {
-  main .navbar {
-    padding: 2rem;
-  }
 }
 main .nav-items > ul > li {
   position: relative;
@@ -338,7 +338,7 @@ main .nav-button a {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 220px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   left: 0; /* Added */
@@ -378,7 +378,79 @@ main .nav-button a {
   left: 60px; /* Adjusted */
   /* transform: translateY(-50%) rotate(-90deg); Adjusted */
 }
+.nav-items ul li:nth-child(3) .dropbtn:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+  top: 50%;
+  left: 85px; /* Adjusted */
+  /* transform: translateY(-50%) rotate(-90deg); Adjusted */
+}
 
+/* Style the arrow */
+.arrow {
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease; 
+  transform: rotate(120deg);
+}
+/* Style the submenu */
+.sub-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the arrow */
+.sub-dropdown .arrow {
+  margin-left: 5px;
+}
+
+/* Position the submenu to the right */
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position the submenu to the right */
+  background-color: #f9f9f9;
+  min-width: 200px;
+  z-index: 1;
+}
+
+/* Show the submenu when hovering over the parent item */
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  /* Adjust dropdown content width */
+  .dropdown-content {
+    width: 100%;
+    left: 0;
+    top: calc(100% - 0px);
+  }
+
+  /* Adjust arrow position */
+  .nav-items ul li:nth-child(2) .dropbtn:after {
+    left: 90%; /* Adjust as needed */
+  }
+
+  .nav-items ul li:nth-child(3) .dropbtn:after {
+    left: 90%; /* Adjust as needed */
+  }
+
+  /* Adjust submenu position */
+  .sub-dropdown-content {
+    top: 0;
+    left: 0; /* Change to display below the parent item */
+    width: 100%; /* Adjust width as needed */
+  }
+}
 
 main #hamburger-menu,
 main #mobile-menu {
@@ -2089,15 +2161,18 @@ textarea {
 }
 
 
-.service:hover {
+/* .service:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.service h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
+.service:hover h2 {
+  font-size: 20px; 
+  margin-bottom: 0; 
+  transform: translateY(-20px); 
+}
+.service:hover p {
+  display: none; /* Hide paragraph text */
 }
 
 .service p {
@@ -2106,20 +2181,69 @@ textarea {
   color: #666;
 }
 
+.service:hover img {
+  width: 80px; 
+  margin-bottom: 10px; 
+  transform: translateY(-20px); 
+}
+
+
+.service p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+  transition: display 0.3s; /* Add transition */
+}
+
 .service img {
   width: 100px;
   height: auto;
   margin: 0 auto 20px;
   display: block;
+  transition: width 0.3s, margin-bottom 0.3s, transform 0.3s; /* Add transition */
+}
+.service-list {
+  display: none; /* Initially hide the list */
+  margin-top: 10px; /* Add some top margin */
+  font-size: 14px; /* Adjust the text size of list items */
+  text-align: justify; /* Justify the list items */
 }
 
-
-
-.service a {
-  text-decoration: none;
-  color: inherit;
+.service-list li {
+  margin-bottom: 5px; /* Add some bottom margin between list items */
 }
 
+.service:hover .service-list {
+  display: block; /* Show the list when hovering over the card */
+}
+@media screen and (min-width: 768px) {
+  /* Styles applied when the screen width is 768px or larger */
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Styles applied when the screen width is 992px or larger */
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles applied when the screen width is 768px or smaller */
+  .service {
+    width: calc(50% - 20px);
+  }
+}
 
 
 
@@ -2213,6 +2337,142 @@ textarea {
 
 
 /* cloud effect */
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.cloud {
+  position: absolute;
+  top: 20%;
+  width: 300px;
+  right: 0;
+  opacity: 1;
+}
+
+.cloud.front {
+  z-index: 9;
+}
+
+.cloud.distant {
+  z-index: 1;
+}
+
+.cloud.background {
+  z-index: 1;
+}
+
+/*Cloud Sizing*/
+.cloud.smaller {
+  margin-right: 400px;
+  width: 100px;
+  margin-top: 50px;
+}
+
+.cloud.small {
+  margin-right: 200px;
+  width: 150px;
+}
+
+.cloud.big {
+  width: 500px;
+  margin-top: 50px;
+  margin-right: 150px;
+}
+
+.cloud.massive {
+  width: 600px;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+
+/*Plane Cloud: Animation*/
+.plane-container {
+  width: 200px;
+  margin: 0px auto;
+  z-index: 3;
+}
+ /*Paper Plane: Image*/
+.plane {
+  width: 100%;
+  height: 60px;
+}
+
+/*Paper Plane: Animation*/
+.plane-container {
+  -webkit-animation: paper-plane-scoping 2s alternate infinite;
+  -moz-animation: paper-plane-scoping 2s alternate infinite;
+  animation: paper-plane-scoping 2s alternate infinite;
+
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes paper-plane-scoping {
+  0% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+}
+
+.plane {
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+
+  -webkit-animation: paper-plane-soaring 4s forwards infinite;
+  -moz-animation: paper-plane-soaring 4s forwards infinite;
+  animation: paper-plane-soaring 4s forwards infinite;
+}
+@-webkit-keyframes paper-plane-soaring {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  60% {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+/**
+ * Clouds
+ */
 .clouds {
   position: absolute;
   top: 0;
@@ -2371,7 +2631,7 @@ textarea {
   background-color: #e5f1fc; /* Light blue background */
   padding: 20px;
   border-radius: 10px;
-  margin:0 10px 0px; /* Adjust margin for spacing */
+  margin:10px 10px 0px; /* Adjust margin for spacing */
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -2728,7 +2988,7 @@ footer .copyright{
   color: #fff;
   font-size: .8rem;
   font-weight: 400;
-  background-color: #f55951;
+  background-color: #f7327a;
   padding: 0.9em 0;
   display: inline-block;
   border: none;
@@ -2739,7 +2999,7 @@ footer .copyright{
 }
 .footer-section .subscribe:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
-  background-color: #f34138;
+  background-color: #e0245e;
 }
 .footer-section .text {
   font-size: 0.9rem;
