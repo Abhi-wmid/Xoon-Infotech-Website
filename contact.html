@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/e93c38bfd56b5f856f530bfdc/36d6b6413192b2c04b8f166ed.js");</script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -266,9 +266,11 @@
               <p>Subscribe to our Newsletter</p><br>
 
               <div class="content">
-                <input type="text" class="mail" placeholder="Your email address" name="mail" required>
-                <input type="submit" value="Subscribe" class="subscribe">
-
+                <form name="submit-to-google-sheet">
+                <input type="mail" class="mail" name="Email" placeholder="Your email address" name="mail" required>
+                <button type="submit" class="subscribe">Subscribe</button>
+              </form>
+              <span id="msg"></span>
               </div>
 
             </div>
@@ -338,6 +340,8 @@ function openEmail() {
 function openAddress() {
     window.open("https://maps.google.com/maps?q=0000+xyz+Street,+Delhi,+200000,+India");
 }
+
+
 
     </script>
 
