@@ -18,6 +18,20 @@
         .mission-heading {
             text-align: center;
             margin-bottom: 20px;
+            
+            /* Adjust margin as needed */
+        }
+        .mission-heading1 {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: -7rem;
+            color: white;
+            /* Adjust margin as needed */
+        }
+        .team-heading3 {
+            text-align: center;
+            margin-top: -10px;
+            color: #0b2545;
             /* Adjust margin as needed */
         }
 
@@ -167,8 +181,9 @@
 
         
         <div class="projects flex">
-            
-                <h2 class="mission-heading" id="mission">Our Mission</h2>
+            <h2 class="mission-heading1" id="mission">Our Mission</h2>
+            <br><br>
+                <h2>Our Mission</h2>
             
             <!-- <div class="projectsContainer"> -->
             <div class="project-container">
@@ -240,8 +255,8 @@
 
 
 <section id="team">
-
-
+        
+<h2 class="team-heading3">Our Team</h2>
         <h2 class="team-heading">Our Team</h2>
 
 
@@ -568,10 +583,12 @@
             <p>Subscribe to our Newsletter</p><br>
             
             <div class="content">
-                <input type="text" class="mail" placeholder="Your email address" name="mail" required>
-                <input type="submit" value="Subscribe" class="subscribe">
-             
-            </div>
+                <form name="submit-to-google-sheet">
+                <input type="mail" class="mail" name="Email" placeholder="Your email address" name="mail" required>
+                <button type="submit" class="subscribe">Subscribe</button>
+              </form>
+              <span id="msg"></span>
+              </div>
            
         </div>
     </div>

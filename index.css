@@ -2925,7 +2925,7 @@ textarea {
     text-decoration: none;
     color: black;
 }
-.footer-section .col form{
+/* .footer-section .col form{
     padding-bottom: 15px;
     display: flex;
     align-items: center;
@@ -2936,7 +2936,7 @@ textarea {
 .footer-section .col form .icon{
     font-size: 18px;
     margin-right: 10px;
-}
+} */
 .footer-section .col form input{
     width: 100%;
     background: transparent;
@@ -2974,17 +2974,19 @@ footer .copyright{
   margin-bottom: 1.8em;
 }
 
-.footer-section .mail {
+.footer-section .content form .mail {
+  background-color: #fff;
   padding: 0.5em 0 0.5em 1.5em;
   line-height: 2;
   width: 120%;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #0e0808;
   border-radius: 0.5em;
   margin-bottom: 1em;
+  margin-left: -20px;
 }
 
 
-.footer-section .subscribe {
+.footer-section .content form .subscribe {
   color: #fff;
   font-size: .8rem;
   font-weight: 400;
@@ -2995,9 +2997,10 @@ footer .copyright{
   border-radius: 0.5em;
   width: 120%;
   cursor: pointer;
+  margin-left: -20px;
   /* margin-bottom: 1.3em; */
 }
-.footer-section .subscribe:hover {
+.footer-section .content form .subscribe:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
   background-color: #e0245e;
 }
@@ -3005,6 +3008,12 @@ footer .copyright{
   font-size: 0.9rem;
   width: 90%;
   text-align: center;
+}
+.footer-section .content span {
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+  color: green;
 }
 
   @media screen and (max-width: 768px) {
@@ -3017,18 +3026,18 @@ footer .copyright{
       justify-content: center;
       align-items: center;
     }
-    .footer-section .mail {
-      width: 200%; /* Adjust width for smaller screens */
+    .footer-section .content form .mail {
+      width: 300%; /* Adjust width for smaller screens */
       flex: 1; /* Equal width for both inputs */
       margin: 1.5em; /* Adjust margin between inputs */
-      margin-left: 15rem;
+      margin-left: 3.5rem;
     }
   
-    .footer-section .subscribe {
-      width: 200%; /* Adjust width for smaller screens */
+    .footer-section .content form .subscribe {
+      width: 300%; /* Adjust width for smaller screens */
       flex: 1; /* Equal width for both inputs */
       margin: 0.5em; /* Adjust margin between inputs */
-      margin-left: 13rem;
+      margin-left: 3.5rem;
       
     
     }

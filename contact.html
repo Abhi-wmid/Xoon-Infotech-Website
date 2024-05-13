@@ -266,9 +266,11 @@
               <p>Subscribe to our Newsletter</p><br>
 
               <div class="content">
-                <input type="text" class="mail" placeholder="Your email address" name="mail" required>
-                <input type="submit" value="Subscribe" class="subscribe">
-
+                <form name="submit-to-google-sheet">
+                <input type="mail" class="mail" name="Email" placeholder="Your email address" name="mail" required>
+                <button type="submit" class="subscribe">Subscribe</button>
+              </form>
+              <span id="msg"></span>
               </div>
 
             </div>
@@ -338,6 +340,8 @@ function openEmail() {
 function openAddress() {
     window.open("https://maps.google.com/maps?q=0000+xyz+Street,+Delhi,+200000,+India");
 }
+
+
 
     </script>
 
