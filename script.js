@@ -433,16 +433,16 @@ window.addEventListener("scroll", function() {
 });
 
 // for footer subscribe button
-$('#toggle').click(function() {
-  if ($(this).is(":checked")) {
-    $(".sub").css("opacity", 0);
-    $(".thanks").css("opacity", 1);
-  } 
-  else if ($(this).is(":not(:checked)")) {
-     $(".sub").css("opacity", 1);
-     $(".thanks").css("opacity", 0);
-  }
-});
+// $('#toggle').click(function() {
+//   if ($(this).is(":checked")) {
+//     $(".sub").css("opacity", 0);
+//     $(".thanks").css("opacity", 1);
+//   } 
+//   else if ($(this).is(":not(:checked)")) {
+//      $(".sub").css("opacity", 1);
+//      $(".thanks").css("opacity", 0);
+//   }
+// });
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -483,3 +483,35 @@ document.addEventListener("DOMContentLoaded", function() {
       return regex.test(email);
   }
 });
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw70_9o1SQYIgIG68dTcnyKmv9klwEOZdBY3GvBv8WipqhwWdXGzqihzNNc7lZGQF8cnA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+          msg.innerHTML = "Thank You for Subscribe!"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
+  // whatsappchat
+  const whatsappLink = document.querySelector('.whatsapp-link');
+  const phoneNumber = '9839679736';
+  
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  
+  whatsappLink.setAttribute('href', whatsappUrl);
+  
+  whatsappLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.open(whatsappUrl, '_blank');
+  });
+  

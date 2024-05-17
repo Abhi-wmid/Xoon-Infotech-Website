@@ -3078,11 +3078,11 @@ footer .copyright{
     margin-top: 5px; 
   }
   
-  .footer-section .social-media-icons a{
+  .footer-section .social-media-icons i {
     margin: 0 10px;
   }
   
-  .footer-section .social-media-icons i{
+  .footer-section .social-media-icons i {
     width: 20px; 
     height: auto;
   }
@@ -3091,9 +3091,26 @@ footer .copyright{
     transform: scale(1.5); 
   }
   
-  .footer-section .social-media-icons a:hover i {
-    color: darkblue; 
+  .footer-section .social-media-icons a:hover .lab.la-facebook-f {
+    color: #3b5998; 
   }
+  
+  .footer-section .social-media-icons a:hover .lab.la-linkedin-in {
+    color: #0077b5; 
+  }
+  
+  .footer-section .social-media-icons a:hover .bi.bi-twitter-x {
+    color:  black;
+  }
+  
+  .footer-section .social-media-icons a:hover .lab.la-instagram {
+    color: #e72c5e; /* Instagram pink */
+  }
+  
+  .footer-section .social-media-icons a:hover .lab.la-whatsapp {
+    color: #0ea847; /* WhatsApp green */
+  }
+  
   
   @media (hover: none) {
     .footer-section .social-media-icons a:active {
@@ -3440,4 +3457,51 @@ margin-inline: auto;
 .containerSR { max-width: 1200px; }
 .section-title { font-size: 4.6rem; }
 .hero { min-height: 800px; }
+}
+
+/* whatsapp */
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.whatsapp-link {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999; /* Ensure it's above other content */
+  transition: transform 0.3s ease;
+  
+}
+
+.whatsapp-link .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(90, 251, 87);
+  border-color: black;
+  color: #2880f3;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 9;
+  left: calc(100% + 10px);
+  left: 100%;
+  transform: translateY(+50%);
+  opacity: 0;
+  animation: slideIn 2s forwards infinite; 
+}
+
+.whatsapp-link:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.whatsapp-link:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+.whatsapp-logo {
+  width: 50px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
 }
