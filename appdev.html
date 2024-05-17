@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xoon Infotech</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./inde.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -14,10 +14,1256 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 </head>
+<style>
+    /*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
 
+/**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+ main .navbar {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 1rem;
+  top: 0;
+  left: 0;
+  height: 90px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  @media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem; /* Smaller padding */
+    height: 20px; /* Smaller height */
+  }
+}
+
+/* 
+////////////////////// */
+/* main .navbar {
+  transition: height 0.3s ease; 
+}
+
+main .navbar.scroll-down {
+  height: 60px; 
+  line-height: 50px; 
+}
+
+main .navbar.scroll-up {
+  height: 80px;
+  line-height: 80px; 
+}
+
+main .nav-button {
+  transition: all 0.3s ease; 
+  text-align: center;
+}
+
+main .nav-button.scroll-down {
+  height: 30px; 
+  line-height: 10px; 
+}
+
+main .nav-button.scroll-up {
+  height: 50px; 
+  line-height: 25px;
+} */
+
+
+.nav-items > ul > li.active > a {
+  /* Define styles for active navigation item */
+  color: #4787e8; /* Example: Change text color */
+  font-weight: bold; /* Example: Make font bold */
+}
+main .nav-items > ul > li {
+  position: relative;
+  display: inline;
+  list-style: none;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+main .nav-items > ul > li > a {
+  color: #353535;
+  font-weight: 500;
+  font-size: 19px;
+  text-decoration: none;
+}
+main .nav-items > ul > li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.17rem;
+  background-color: #4787e8;
+  left: 0;
+  bottom: 0;
+  transform-origin: 0% 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+main .nav-items > ul > li:hover::after {
+  transform: scaleX(1);
+}
+main .nav-logo a,
+main .nav-button a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+}
+main .nav-logo a img {
+  width: 100%;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (min-width: 768px) {
+  main .nav-logo a img {
+    height: 60px;
+  }
+}
+main .nav-button {
+  background-color: #4787e8;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .anim-layer {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #4787e8;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+main .nav-button:hover .anim-layer {
+  width: 100%;
+  left: 0;
+}
+main .nav-button:hover a {
+  color: #141214;
+}
+main .nav-button a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+}
+
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+  color: #353535;
+  font-weight: 500;
+  font-size: 19px;
+  text-decoration: none;
+  position: relative; /* Added */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 0; /* Added */
+  top: calc(100% - 0px); /* Added */
+  width: 160%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Small arrow for About menu */
+.nav-items ul li:nth-child(2) .dropbtn:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+  top: 50%;
+  left: 60px; /* Adjusted */
+  /* transform: translateY(-50%) rotate(-90deg); Adjusted */
+}
+.nav-items ul li:nth-child(3) .dropbtn:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+  top: 50%;
+  left: 85px; /* Adjusted */
+  /* transform: translateY(-50%) rotate(-90deg); Adjusted */
+}
+
+/* Style the arrow */
+.arrow {
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease; 
+  transform: rotate(120deg);
+}
+/* Style the submenu */
+.sub-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the arrow */
+.sub-dropdown .arrow {
+  margin-left: 5px;
+}
+
+/* Position the submenu to the right */
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position the submenu to the right */
+  background-color: #f9f9f9;
+  min-width: 200px;
+  z-index: 1;
+}
+
+/* Show the submenu when hovering over the parent item */
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  /* Adjust dropdown content width */
+  .dropdown-content {
+    width: 100%;
+    left: 0;
+    top: calc(100% - 0px);
+  }
+
+  /* Adjust arrow position */
+  .nav-items ul li:nth-child(2) .dropbtn:after {
+    left: 90%; /* Adjust as needed */
+  }
+
+  .nav-items ul li:nth-child(3) .dropbtn:after {
+    left: 90%; /* Adjust as needed */
+  }
+
+  /* Adjust submenu position */
+  .sub-dropdown-content {
+    top: 0;
+    left: 0; /* Change to display below the parent item */
+    width: 100%; /* Adjust width as needed */
+  }
+}
+
+main #hamburger-menu,
+main #mobile-menu {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  main #mobile-menu {
+    background-color: #0b2545;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 10;
+  }
+  main .mobile-nav-items > ul {
+    padding: 0px;
+  }
+  main .mobile-nav-items > ul > li {
+    text-align: center;
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  main .mobile-nav-items > ul > li > a {
+    color: white;
+    text-decoration: none;
+  }
+  main .mobile-nav-items > ul > li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.17rem;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transform-origin: 0% 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  main .mobile-nav-items > ul > li:hover::after {
+    transform: scaleX(1);
+  }
+  main .mobile-nav-button {
+    background-color: #4787e8;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  main .mobile-nav-button .anim-layer {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  main .mobile-nav-button:hover .anim-layer {
+    width: 100%;
+    left: 0;
+  }
+  main .mobile-nav-button:hover a {
+    color: #141214;
+  }
+  main .mobile-nav-button a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+  }
+  main .nav-items > ul,
+  main .nav-button {
+    display: none;
+  }
+
+ 
+
+
+  
+  main #hamburger-cross {
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 26px;
+  }
+  main #hamburger-menu {
+    display: block;
+    color: #4787e8;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+/* footer-css */
+
+footer{
+    width: 100%;
+    background: lightblue;
+    color: black;
+    padding: 50px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.footer-section .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-section .col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.footer-section .col:nth-child(2), .col:nth-child(3){
+    flex-basis: 15%;
+}
+.footer-section .footer_logo{
+    width: 120px;
+    position: relative;
+    top: -23px;
+    left: px;
+}
+.footer-section .footer_about{
+    position: relative;
+    top: -20px;
+}
+.footer-section .col h3{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+}
+.footer-section .footer_email{
+    width: fit-content;
+    margin: 10px 0;
+}
+.footer-section .col ul li{
+    list-style: none;
+    margin-bottom: 8px;
+}
+.footer-section .col ul li a{
+    text-decoration: none;
+    color: black;
+}
+.footer-section .col form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid darkblue;
+    margin-bottom: 50px;
+}
+.footer-section .col form .icon{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.footer-section .col form input{
+    width: 100%;
+    background: transparent;
+    color: black;
+    border: 0;
+    outline: none;
+}
+
+/* .footer-section hr.new1 {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(148, 53, 53);
+    margin: auto;
+    box-shadow: #fff;
+} */
+footer .copyright{
+    text-align: center;
+    
+}
+
+@keyframes moveline{
+    0%{
+        left:-20px;
+    }
+    100%{
+        left:100%;
+    }
+}
+
+.footer-section .content {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+  margin-bottom: 1.8em;
+}
+
+.footer-section .mail {
+  padding: 0.5em 0 0.5em 1.5em;
+  line-height: 2;
+  width: 120%;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+
+.footer-section .subscribe {
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 400;
+  background-color: #f7327a;
+  padding: 0.9em 0;
+  display: inline-block;
+  border: none;
+  border-radius: 0.5em;
+  width: 120%;
+  cursor: pointer;
+  /* margin-bottom: 1.3em; */
+}
+.footer-section .subscribe:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
+  background-color: #e0245e;
+}
+.footer-section .text {
+  font-size: 0.9rem;
+  width: 90%;
+  text-align: center;
+}
+
+  @media screen and (max-width: 768px) {
+    .footer-section .content {
+      padding: 0 1em; /* Adjust padding for smaller screens */
+    }
+    .footer-section .text {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-section .mail {
+      width: 200%; /* Adjust width for smaller screens */
+      flex: 1; /* Equal width for both inputs */
+      margin: 1.5em; /* Adjust margin between inputs */
+      margin-left: 15rem;
+    }
+  
+    .footer-section .subscribe {
+      width: 200%; /* Adjust width for smaller screens */
+      flex: 1; /* Equal width for both inputs */
+      margin: 0.5em; /* Adjust margin between inputs */
+      margin-left: 13rem;
+      
+    
+    }
+  
+    .footer-section .text {
+      width: 100%; /* Adjust width for smaller screens */
+      
+    }
+  
+    .footer-section .icons {
+      width: 100%; /* Adjust width for smaller screens */
+      justify-content: center; /* Center icons on smaller screens */
+    }
+  }
+
+  .footer-section .icons {
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+.footer-section .icons a i {
+    font-size: 32px;
+    text-decoration: none;
+    color: #353535;
+    margin: 0rem 0.3rem;
+  }
+  @media only screen and (min-width: 1024px) {
+    .footer-section .icons a i {
+      margin: 0rem 0.7rem;
+    }
+  }
+
+  .footer-section .social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px; 
+  }
+  
+  .footer-section .social-media-icons a{
+    margin: 0 10px;
+  }
+  
+  .footer-section .social-media-icons i{
+    width: 20px; 
+    height: auto;
+  }
+  
+  .footer-section .social-media-icons a:hover {
+    transform: scale(1.5); 
+  }
+  
+  .footer-section .social-media-icons a:hover i {
+    color: darkblue; 
+  }
+  
+  @media (hover: none) {
+    .footer-section .social-media-icons a:active {
+        transform: scale(1.5); 
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 786px) {
+    .footer-section .social-media-icons {
+        justify-content: space-around; 
+        margin-top: 10px; 
+    }
+  
+    .footer-section .social-media-icons a {
+        margin: 15px; 
+    }
+  }
+  
+  
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+/**
+ * colors
+ */
+
+--st-patricks-blue: hsl(236, 57%, 28%);
+--amaranth-purple: hsl(335, 88%, 38%);
+--royal-blue-dark: hsl(231, 68%, 21%);
+--chrome-yellow: hsl(39, 100%, 52%);
+--space-cadet-1: hsl(230, 41%, 25%);
+--space-cadet-2: hsl(230, 59%, 16%);
+--winter-sky_50: hsla(335, 87%, 53%, 0.5);
+--purple-navy: hsl(236, 26%, 43%);
+--ksu-purple: hsl(275, 54%, 33%);
+--winter-sky: hsl(335, 87%, 53%);
+--razzmatazz: hsl(335, 87%, 51%);
+--platinum: hsl(0, 0%, 90%);
+--black_70: hsla(0, 0%, 0%, 0.7);
+--rajah: hsl(29, 99%, 67%);
+--white: hsl(0, 0%, 100%);
+
+--gradient-1: linear-gradient(90deg,var(--royal-blue-dark) 0,var(--ksu-purple) 51%,var(--royal-blue-dark));
+--gradient-2: linear-gradient(90deg,var(--razzmatazz) ,var(--rajah));
+
+/**
+ * typography
+ */
+
+--ff-source-sans-pro: 'Source Sans Pro', sans-serif;
+--ff-poppins: 'Poppins', sans-serif;
+
+--fs-1: 4.2rem;
+--fs-2: 3.8rem;
+--fs-3: 3.2rem;
+--fs-4: 2.5rem;
+--fs-5: 2.4rem;
+--fs-6: 2rem;
+--fs-7: 1.8rem;
+--fs-8: 1.5rem;
+
+--fw-500: 500;
+--fw-600: 600;
+--fw-700: 700;
+
+/**
+ * border radius
+ */
+
+--radius-4: 4px;
+--radius-12: 12px;
+
+/**
+ * spacing
+ */
+
+--section-padding: 60px;
+
+/**
+ * transition
+ */
+
+--transition-1: 0.15s ease;
+--transition-2: 0.35s ease;
+--cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+--cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+
+/**
+ * shadow
+ */
+
+--shadow: 0 5px 20px 1px hsla(220, 63%, 33%, 0.1);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+
+
+button,
+input {
+background: none;
+border: none;
+font: inherit;
+}
+
+button { cursor: pointer; }
+
+input { width: 100%; }
+
+ion-icon { pointer-events: none; }
+
+img { height: auto; }
+
+address { font-style: normal; }
+
+html {
+font-family: var(--ff-poppins);
+font-size: 10px;
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--white);
+color: var(--purple-navy);
+font-size: 1.6rem;
+}
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track { background-color: hsl(0, 0%, 95%); }
+
+::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+
+::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+
+
+
+
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.container { padding-inline: 15px; }
+
+.h2,
+.h3 { font-family: var(--ff-source-sans-pro); }
+
+.btn {
+background-image: var(--gradient-2);
+background-size: 200%;
+color: var(--white);
+padding: 12px 35px;
+font-size: var(--fs-8);
+font-weight: var(--fw-500);
+border-radius: 0 25px;
+transition: var(--transition-2);
+}
+
+.btn:is(:hover, :focus) { background-position: right; }
+
+.w-100 { width: 100%; }
+
+.banner-animation { animation: waveAnim 2s linear infinite alternate; }
+
+@keyframes waveAnim {
+0% { transform: translate(0, 0) rotate(0); }
+100% { transform: translate(2px, 2px) rotate(1deg); }
+}
+
+.section { padding-block: var(--section-padding); }
+
+.section-title {
+color: var(--st-patricks-blue);
+font-size: var(--fs-3);
+margin-block-end: 60px;
+max-width: max-content;
+margin-inline: auto;
+}
+
+.underline { position: relative; }
+
+.underline::before {
+content: "";
+position: absolute;
+bottom: -20px;
+left: 50%;
+transform: translateX(-50%);
+width: 70%;
+height: 6px;
+background-image: var(--gradient-2);
+border-radius: 10px;
+}
+
+:is(.service-card, .features-card) .title {
+color: var(--st-patricks-blue);
+font-size: var(--fs-4);
+font-weight: var(--fw-700);
+}
+
+:is(.service-card, .features-card, .blog-card) .text { font-size: var(--fs-8); }
+
+.img-cover {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+
+.hero {
+background-image: url("../images/hero-bg-bottom.png"),
+                  url("../images/hero-bg.png"),
+                  var(--gradient-1);
+background-repeat: no-repeat, no-repeat, no-repeat;
+background-position: -280px bottom, center, center;
+background-size: auto, cover, auto;
+padding-block-start: 120px;
+padding-block-end: var(--section-padding);
+}
+
+.hero-content { margin-block-end: 50px; }
+
+.hero-subtitle {
+color: var(--chrome-yellow);
+font-family: var(--ff-source-sans-pro);
+font-size: var(--fs-7);
+margin-block-end: 15px;
+}
+
+.hero-title {
+color: var(--white);
+font-size: var(--fs-1);
+margin-block-end: 20px;
+}
+
+.hero-text {
+color: var(--white);
+font-size: var(--fs-8);
+margin-block-end: 30px;
+}
+
+
+
+
+.about-banner { margin-block-end: 30px; }
+
+.about .section-title { margin-inline: 0; }
+
+.about .underline::before {
+left: 0;
+transform: translateX(0);
+}
+
+.about-text {
+font-size: var(--fs-8);
+margin-block-end: 20px;
+}
+
+.stats-list {
+display: grid;
+gap: 30px;
+}
+
+.stats-card {
+text-align: center;
+padding: 15px;
+box-shadow: var(--shadow);
+border-radius: var(--radius-12);
+}
+
+.stats-title {
+color: var(--st-patricks-blue);
+font-size: var(--fs-2);
+font-weight: var(--fw-700);
+}
+
+.stats-text { font-size: var(--fs-8); }
+
+
+
+
+
+/*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+
+.service-list {
+display: grid;
+gap: 30px;
+}
+
+.service-card {
+padding: 30px;
+box-shadow: var(--shadow);
+border-radius: var(--radius-12);
+}
+
+.service-card .card-icon {
+  max-width: 165px;
+  display: grid;
+  place-content: center;
+  margin-inline: auto;
+  transition: var(--transition-1);
+}
+
+.service-card .card-icon img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Ensure the image is circular */
+}
+
+.service-card:hover .card-icon {
+  background-color: var(--winter-sky);
+}
+
+.service-card .card-icon ion-icon {
+  font-size: 5rem;
+  color: var(--winter-sky);
+  --ionicon-stroke-width: 20px;
+  transition: var(--transition-1);
+}
+
+.service-card:hover .card-icon ion-icon {
+  color: var(--white);
+}
+
+
+.service-card .title {
+text-align: center;
+margin-block-end: 15px;
+}
+
+.service-card .text {
+text-align: center;
+margin-block-end: 20px;
+}
+
+.service-card .card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Adjust width as needed */
+  height: 60px; /* Adjust height as needed */
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 10px; /* Increase padding for larger size */
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(74, 125, 201);
+  color: var(--white);
+  font-size: 1.2rem; /* Increase font size for larger size */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.service-card .card-btn:hover,
+.service-card .card-btn:focus {
+  background-color: rgb(20, 93, 203); /* Darker shade for hover/focus */
+  outline: none; /* Remove default focus outline */
+}
+
+.service-card .card-btn ion-icon {
+  font-size: 2rem; /* Increase icon size for larger button */
+  margin-top: 2px; /* Adjust icon alignment */
+}
+
+
+/*-----------------------------------*\
+#FEATURE
+\*-----------------------------------*/
+
+.features-list > li:first-child { margin-block-end: 30px; }
+
+.features-card {
+display: flex;
+align-items: flex-start;
+gap: 20px;
+}
+
+.features-card .icon {
+background-image: var(--gradient-1);
+background-size: 200%;
+color: var(--white);
+min-width: max-content;
+max-width: max-content;
+font-size: 36px;
+padding: 22px;
+border-radius: 50%;
+}
+
+.features-card .icon ion-icon { --ionicon-stroke-width: 20px; }
+
+.features-card .title { margin-block-end: 10px; }
+
+.features-banner { margin-block: 40px; }
+
+.features-banner > img {
+max-width: max-content;
+margin-inline: auto;
+}
+
+
+
+
+/**
+* responsive for larger than 550px screen
+*/
+
+@media (min-width: 550px) {
+
+/**
+ * REUSED STYLE
+ */
+
+.container {
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.section-title { --fs-3: 3.6rem; }
+
+
+
+
+
+
+
+/**
+ * ABOUT
+ */
+
+.stats-list { grid-template-columns: repeat(3, 1fr); }
+
+
+
+
+}
+
+
+
+
+
+
+
+/**
+* responsive for larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+/**
+ * REUSED STYLE
+ */
+
+.container { max-width: 720px; }
+
+
+
+/**
+ * HERO
+ */
+
+.hero {
+  min-height: 600px;
+  display: grid;
+  place-items: center;
+}
+
+.hero-content { margin-block-end: 0; }
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+
+
+/**
+ * SERVICE
+ */
+
+.service-list { grid-template-columns: 1fr 1fr; }
+
+
+
+/**
+ * FEATURES
+ */
+
+.features-list > li:first-child { margin-block-end: 0; }
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+
+
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 992px screen
+*/
+
+@media (min-width: 992px) {
+
+/**
+ * CUSTOM PROPERTY
+ */
+
+:root {
+
+  /**
+   * typography
+   */
+
+  --fs-1: 5.4rem;
+
+}
+
+
+
+/**
+ * REUSED STYLE
+ */
+
+.container { max-width: 950px; }
+
+
+
+
+
+/**
+ * HERO
+ */
+
+.hero { min-height: 700px; }
+
+
+
+/**
+ * ABOUT
+ */
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+
+
+/**
+ * SERVICE
+ */
+
+.service-list { grid-template-columns: repeat(3, 1fr); }
+
+
+
+/**
+ * FEATURES
+ */
+
+.features-list { grid-template-columns: 1fr; }
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.features .section-title { grid-column: 1 / 4; }
+
+.features-banner {
+  margin-block: 0;
+  display: grid;
+  place-items: center;
+}
+
+
+
+
+}
+@media (min-width: 1200px) {
+
+/**
+ * REUSED STYLE
+ */
+
+.container { max-width: 1200px; }
+
+.section-title { --fs-3: 4.6rem; }
+
+
+
+/**
+ * HERO
+ */
+
+.hero { min-height: 800px; }
+
+
+
+
+
+}
+</style>
 <body>
 
     <!-- <section id="loader" class="loader">
@@ -129,82 +1375,293 @@
             
         </div>
 
-
         <!-- ---------------------------------------------------------  End of navbar  -->
-        <br><br><br>
-        <br><br>
-        <h2>Welcome</h2>
-        <br><br><br><br><br><br>
+       
+        <main>
+            <article>
         
-        <div class="frame">
-            <div class="plane-container">
-            <a href="http://customer.io/" target="_blank">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="1131.53px" height="379.304px" viewBox="0 0 1131.53 379.304" enable-background="new 0 0 1131.53 379.304"
-            xml:space="preserve" class="plane">
-            <polygon fill="#D8D8D8" points="72.008,0 274.113,140.173 274.113,301.804 390.796,221.102 601.682,367.302 1131.53,0.223  "/>
-            <polygon fill="#C4C4C3" points="1131.53,0.223 274.113,140.173 274.113,301.804 390.796,221.102   "/>
-            </svg></a>
-            
-            </div>
-            </div>
-            <div class="clouds">
-            
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
-            height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud big front slowest">
-            <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
-            </svg>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
-            height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant smaller">
-            <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
-            </svg>
-            
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
-            height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud small slow">
-            <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
-            </svg>
-            
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
-            height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant super-slow massive">
-            <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
-            </svg>
-            
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
-            height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud slower">
-            <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
-            </svg>
-            
-            </div>
-            
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br>
-<!-- <br><br><br><br><br><br> -->
-
-
-
+              <!-- 
+                - #HERO
+              -->
         
+              <section class="hero" id="home">
+                <div class="container">
+        
+                  <div class="hero-content">
+        
+                    <p class="hero-subtitle">Your Trusted Mobile App Development Partner</p>
+        
+                    <h2 class="h2 hero-title">Robust & Scalable Mobile App Development</h2>
+        
+                    <p class="hero-text">
+                      Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac
+                      at purus.
+                    </p>
+        
+                    <button class="btn">Enquire Now</button>
+        
+                  </div>
+        
+                  <figure class="hero-banner">
+                    <img src="./images/appsdevelp.png" width="694" height="529" loading="lazy" alt="hero-banner"
+                      class="w-100 banner-animation">
+                  </figure>
+        
+                </div>
+              </section>
+        
+        
+        
+        
+        
+              <!-- 
+                - #ABOUT
+              -->
+        
+              <section class="section about" id="about">
+                <div class="container">
+        
+                  <figure class="about-banner">
+                    <img src="./assets/images/about-banner.png" width="700" height="532" loading="lazy" alt="about banner"
+                      class="w-100 banner-animation">
+                  </figure>
+        
+                  <div class="about-content">
+        
+                    <h2 class="h2 section-title underline">Why Our Agency</h2>
+        
+                    <p class="about-text">
+                      In dictum aliquam turpis lacinia iaculis. Fusce vel malesuada magna. Nulla vel maximus risus. Donec
+                      volutpat metus
+                      lacinia risus accumsan, ac bibendum libero efficitur. Pellentesque nec nisi sit amet magna tempus
+                      hendrerit ut a odio.
+                    </p>
+        
+                    <p class="about-text">
+                      Praesent rhoncus commodo tortor, id pulvinar nisl blandit at. Nulla facilisi. Quisque turpis ante,
+                      vehicula condimentum
+                      arcu.
+                    </p>
+        
+                    <ul class="stats-list">
+        
+                      <li class="stats-card">
+                       
+        
+                        <p class="stats-text">Satisfied Clients</p>
+                      </li>
+        
+                      <li class="stats-card">
+                        
+        
+                        <p class="stats-text">Good reviews</p>
+                      </li>
+        
+                      <li class="stats-card">
+                        
+        
+                        <p class="stats-text">Trusted</p>
+                      </li>
+        
+                    </ul>
+        
+                  </div>
+        
+                </div>
+              </section>
+        
+        
+        
+        
+        
+              <!-- 
+                - #SERVICE
+              -->
+        
+              <section class="section service" id="services">
+                <div class="container">
+        
+                  <h2 class="h2 section-title underline">Our Speciallization</h2>
+        
+                  <ul class="service-list">
+        
+                    <li>
+                      <div class="service-card">
+        
+                        <div class="card-icon">
+                            <img src="./assets/images/Android-App.png">
+                        </div>
+        
+                        <h3 class="h3 title">Android Development</h3>
+        
+                        <p class="text">
+                          Mauris ut felis malesuada eros varius tristique a at orci. Nulla vulputate, leo sit amet rhoncus
+                          suscipit, enim ex
+                          venenatis ipsum, et porttitor.
+                        </p>
+        
+                        <button class="card-btn" aria-label="Show More">Show More
+                          <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </button>
+        
+                      </div>
+                    </li>
+        
+                    <li>
+                      <div class="service-card">
+        
+                        <div class="card-icon">
+                            <img src="./assets/images/iosdev.png">
+                        </div>
+        
+                        <h3 class="h3 title">IOS Development</h3>
+        
+                        <p class="text">
+                          Mauris ut felis malesuada eros varius tristique a at orci. Nulla vulputate, leo sit amet rhoncus
+                          suscipit, enim ex
+                          venenatis ipsum, et porttitor.
+                        </p>
+        
+                        <button class="card-btn" aria-label="Show More">
+                         show More <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </button>
+        
+                      </div>
+                    </li>
+        
+                    <li>
+                      <div class="service-card">
+        
+                        <div class="card-icon">
+                            <img src="./assets/images/hybrid-app-developement-services.png">
+                        </div>
+        
+                        <h3 class="h3 title">Hybrid Development</h3>
+        
+                        <p class="text">
+                          Mauris ut felis malesuada eros varius tristique a at orci. Nulla vulputate, leo sit amet rhoncus
+                          suscipit, enim ex
+                          venenatis ipsum, et porttitor.
+                        </p>
+        
+                        <button class="card-btn" aria-label="Show More">Show More
+                          <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </button>
+        
+                      </div>
+                    </li>
+        
+                  </ul>
+        
+                </div>
+              </section>
+        
+        
+        
+        
+        
+              <!-- 
+                - #FEATURES
+              -->
+        
+              <section class="section features" id="features">
+                <div class="container">
+        
+                  <h2 class="h2 section-title underline">Our Features</h2>
+        
+                  <ul class="features-list">
+        
+                    <li>
+                      <div class="features-card">
+        
+                        <div class="icon">
+                          <ion-icon name="bulb-outline"></ion-icon>
+                        </div>
+        
+                        <div class="content">
+                          <h3 class="h3 title">Idea & Analysis</h3>
+        
+                          <p class="text">
+                            Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
+                          </p>
+                        </div>
+        
+                      </div>
+                    </li>
+        
+                    <li>
+                      <div class="features-card">
+        
+                        <div class="icon">
+                          <ion-icon name="color-palette-outline"></ion-icon>
+                        </div>
+        
+                        <div class="content">
+                          <h3 class="h3 title">Designing</h3>
+        
+                          <p class="text">
+                            Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
+                          </p>
+                        </div>
+        
+                      </div>
+                    </li>
+        
+                  </ul>
+        
+                  <figure class="features-banner">
+                    <img src="./assets/images/feautres-banner.png" width="369" height="318" loading="lazy" alt="Features Banner"
+                      class="w-100 banner-animation">
+                  </figure>
+        
+                  <ul class="features-list">
+        
+                    <li>
+                      <div class="features-card">
+        
+                        <div class="icon">
+                          <ion-icon name="code-slash-outline"></ion-icon>
+                        </div>
+        
+                        <div class="content">
+                          <h3 class="h3 title">Development</h3>
+        
+                          <p class="text">
+                            Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
+                          </p>
+                        </div>
+        
+                      </div>
+                    </li>
+        
+                    <li>
+                      <div class="features-card">
+        
+                        <div class="icon">
+                          <ion-icon name="rocket-outline"></ion-icon>
+                        </div>
+        
+                        <div class="content">
+                          <h3 class="h3 title">Testing & Lunching</h3>
+        
+                          <p class="text">
+                            Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
+                          </p>
+                        </div>
+        
+                      </div>
+                    </li>
+        
+                  </ul>
+        
+                </div>
+              </section>
+    
+        
+            </article>
+          </main>
+
+    
 
 
 <footer>
@@ -252,9 +1709,11 @@
             <p>Subscribe to our Newsletter</p><br>
             
             <div class="content">
-                <input type="text" class="mail" placeholder="Your email address" name="mail" required>
-                <input type="submit" value="Subscribe" class="subscribe">
-             
+              <form name="submit-to-google-sheet">
+              <input type="mail" class="mail" name="Email" placeholder="Your email address" name="mail" required>
+              <button type="submit" class="subscribe">Subscribe</button>
+            </form>
+            <span id="msg"></span>
             </div>
            
         </div>
