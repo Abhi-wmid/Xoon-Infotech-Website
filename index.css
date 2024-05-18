@@ -782,9 +782,20 @@ main .aboutContainer .leftAbout p {
   main .aboutContainer .leftAbout h1 {
     font-size: 2.5rem;
   }
+  
   main .aboutContainer .leftAbout p {
     font-size: 1.5rem;
   }
+}
+@media only screen and (max-width: 600px) {
+  main .aboutContainer .leftAbout p{
+    text-align: justify;
+  }
+  main .aboutContainer .leftAbout h1{
+    color: #baea42;
+    text-align: center;
+  }
+  
 }
 @media only screen and (min-width: 1024px) {
   main .aboutContainer .leftAbout {
