@@ -194,9 +194,9 @@ main .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   @media only screen and (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 1rem; /* Smaller padding */
-    height: 20px; /* Smaller height */
+  main .navbar {
+    padding: 0.5rem 1rem; 
+    height: 60px; 
   }
 }
 
@@ -2177,11 +2177,6 @@ textarea {
   display: none; /* Hide paragraph text */
 }
 
-.service p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #666;
-}
 
 .service:hover img {
   width: 80px; 
@@ -2243,7 +2238,11 @@ textarea {
 @media only screen and (max-width: 768px) {
   /* Styles applied when the screen width is 768px or smaller */
   .service {
-    width: calc(50% - 20px);
+    width: 300px;}
+    .service h2 {
+  font-size: 20px; 
+ 
+
   }
 }
 
@@ -3160,11 +3159,11 @@ transition: 0.35s ease;
 
 .w-100 { width: 100%; }
 
-.banner-animation { animation: waveAnim 2s linear infinite alternate; }
+.banner-animation { animation: waveAnim 1.5s linear infinite alternate; }
 
 @keyframes waveAnim {
 0% { transform: translate(0, 0) rotate(0); }
-100% { transform: translate(2px, 2px) rotate(1deg); }
+100% { transform: translate(2px, 2px) rotate(2deg); }
 }
 
 .section { padding-block: 60px; }
@@ -3214,6 +3213,7 @@ background-position: -280px bottom, center, center;
 background-size: auto, cover, auto;
 padding-block-start: 0px;
 padding-block-end: 60px;
+
 }
 
 .hero-content { margin-block-end: 50px; }
@@ -3221,14 +3221,29 @@ padding-block-end: 60px;
 .hero-subtitle {
 color: rgb(216, 216, 86);
 font-family: 'Source Sans Pro', sans-serif;
-font-size: 1.8rem;
+font-size: 2.4rem;
 margin-block-end: 15px;
+text-align: center;
+margin-top: -3rem;
 }
-
+@media only screen and (max-width: 768px) {
+  .hero-subtitle {
+    margin-top: 100px;
+    font-size: 1.8rem;
+    margin-block-end: 15px;
+    text-align: center;
+  }
+}
 .hero-title {
-color: hsl(0, 0%, 100%);;
-font-size: 5.2rem;
+color: hsl(0, 0%, 100%);
+font-size: 4.8rem;
 margin-block-end: 20px;
+}
+@media only screen and (max-width: 768px) {
+.hero-title {
+  font-size: 3.2rem;
+  margin-block-end: 20px;
+  }
 }
 
 .hero-text {
@@ -3379,6 +3394,12 @@ margin-inline: auto;
 }
 
 /*responsive*/
+@media only screen and (max-width: 768px) {
+  .hero {
+    margin-top: 0px;
+  }
+}
+
 @media (min-width: 550px) {
 .containerSR {
   max-width: 550px;
@@ -3394,6 +3415,7 @@ margin-inline: auto;
   min-height: 600px;
   display: grid;
   place-items: center;
+  margin-top: 0px;
 }
 
 .hero-content { margin-block-end: 0; }
