@@ -2060,7 +2060,7 @@ textarea {
 
    /* scrollUpIco  */
 
-#scroll-up-icon {
+#scrollup-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -2070,12 +2070,12 @@ textarea {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-#scroll-up-icon.show {
+#scrollup-icon.show {
   opacity: 1;
   visibility: visible;
 }
 
-.scroll-up-link {
+.scrollup-link {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -3104,7 +3104,7 @@ footer .copyright{
   }
   
   .footer-section .social-media-icons a:hover .lab.la-instagram {
-    color: #e72c5e; /* Instagram pink */
+    color: #e4406c; /* Instagram pink */
   }
   
   .footer-section .social-media-icons a:hover .lab.la-whatsapp {
@@ -3277,39 +3277,36 @@ gap: 30px;
 }
 
 .serviceSR-card {
-padding: 30px;
-box-shadow: 0 5px 20px 1px hsla(220, 63%, 33%, 0.1);
-border-radius: 12px;
-}
-
-.serviceSR-card .card-icon {
-  max-width: 165px;
-  display: grid;
-  place-content: center;
-  margin-inline: auto;
-  transition: 0.15s ease;
-}
-
-.serviceSR-card .card-icon img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%; /* Ensure the image is circular */
-}
-
-.serviceSR-card:hover .card-icon {
-  background-color: hsl(335, 87%, 53%);
-}
-
-.serviceSR-card .card-icon ion-icon {
-  font-size: 5rem;
-  color: hsl(335, 87%, 53%);
-  --ionicon-stroke-width: 20px;
-  transition: 0.15s ease;
-}
-
-.serviceSR-card:hover .card-icon ion-icon {
-  color: hsl(0, 0%, 100%);
-}
+  padding: 30px;
+  box-shadow: 0 5px 20px 1px hsla(220, 63%, 33%, 0.1);
+  border-radius: 12px;
+  width: 370px; 
+      height: 430px; 
+      object-fit: cover;
+  }
+  
+  .serviceSR-card .card-icon {
+    max-width: 165px;
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+    transition: 0.50s ease;
+    width: 200px; 
+      height: 150px; 
+      object-fit: cover;
+  }
+  
+  .serviceSR-card .card-icon img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Ensure the image is circular */
+  }
+  
+  .serviceSR-card:hover .card-icon {
+    background-color: hsl(197, 41%, 88%);
+    border-radius: 40%;
+  }
+  
 
 
 .serviceSR-card .title {

@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // // scrollUpIco
 
 // window.addEventListener('scroll', function() {
-//   var scrollUpIcon = document.getElementById('scroll-up-icon');
+//   var scrollUpIcon = document.getElementById('scrollup-icon');
 //   if (window.scrollY > 100) {
 //       scrollUpIcon.classList.add('show');
 //   } else {
@@ -107,37 +107,48 @@ document.addEventListener('DOMContentLoaded', function() {
 //   }
 // });
 
-//update scrollico
 
 
-// Smooth scroll function
+// scroll behavior
+
+function disableSmoothScroll() {
+  document.documentElement.style.scrollBehavior = 'auto';
+}
+
+function restoreSmoothScroll() {
+  document.documentElement.style.scrollBehavior = 'smooth';
+}
+
 function scrollToTop() {
-  var scrollDuration = 1000; // Scroll duration in milliseconds
+  disableSmoothScroll();  
+  
+  var scrollDuration = 800;
   var scrollStep = -window.scrollY / (scrollDuration / 15);
   var scrollInterval = setInterval(function() {
       if (window.scrollY !== 0) {
           window.scrollBy(0, scrollStep);
       } else {
           clearInterval(scrollInterval);
+          restoreSmoothScroll();  
       }
   }, 15);
 }
 
-// Scroll event listener to show/hide the scroll-up icon
+
 window.addEventListener('scroll', function() {
-  var scrollUpIcon = document.getElementById('scroll-up-icon');
-  if (window.scrollY > 500) {
+  var scrollUpIcon = document.getElementById('scrollup-icon');
+  if (window.scrollY > 400) {
       scrollUpIcon.classList.add('show');
   } else {
       scrollUpIcon.classList.remove('show');
   }
 });
 
-// Click event listener for the scroll-up icon
-document.querySelector('.scroll-up-link').addEventListener('click', function(event) {
+document.querySelector('.scrollup-link').addEventListener('click', function(event) {
   event.preventDefault();
   scrollToTop();
 });
+
 
 // slider
 
@@ -412,21 +423,21 @@ window.addEventListener("scroll", function() {
   if (currentScroll > lastScrollTop) {
     // scrolling down
     navbar.classList.add('scroll-down'); 
-    navbar.classList.remove('scroll-up'); 
+    navbar.classList.remove('scrollup'); 
     contactButton.classList.add('scroll-down'); 
-    contactButton.classList.remove('scroll-up'); 
+    contactButton.classList.remove('scrollup'); 
   } else {
     // scrolling up
     navbar.classList.remove('scroll-down'); 
-    navbar.classList.add('scroll-up'); 
+    navbar.classList.add('scrollup'); 
     contactButton.classList.remove('scroll-down'); 
-    contactButton.classList.add('scroll-up'); 
+    contactButton.classList.add('scrollup'); 
   }
 
-  // If the user has scrolled to the top of the page, remove the scroll-up class
+  // If the user has scrolled to the top of the page, remove the scrollup class
   if (currentScroll === 0) {
-    navbar.classList.remove('scroll-up');
-    contactButton.classList.remove('scroll-up');
+    navbar.classList.remove('scrollup');
+    contactButton.classList.remove('scrollup');
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
@@ -505,7 +516,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbw70_9o1SQYIgIG68dTcn
   // whatsappchat
   const whatsappLink = document.querySelector('.whatsapp-link');
   const phoneNumber = '9839679736';
-  
+  const message="helo"
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
   whatsappLink.setAttribute('href', whatsappUrl);
