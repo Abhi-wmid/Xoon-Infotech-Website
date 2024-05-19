@@ -658,6 +658,10 @@ main .home .homeLeft h4 {
   font-size: 4vw;
   font-weight: 400;
 }
+main .home .homeLeft p {
+ text-align: justify;
+ line-height: 1.8rem;
+}
 @media only screen and (min-width: 768px) {
   main .home .homeLeft h3 {
     font-size: 4vw;
@@ -707,6 +711,7 @@ main .home .homeRight {
 main .home .homeRight img {
   width: 50vw;
   height: auto;
+  
   -o-object-fit: cover;
      object-fit: cover;
 }
