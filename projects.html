@@ -132,6 +132,7 @@
                         </li>
                     <li class="active"><a href="./projects.html"> Projects </a></li>
                     <li><a href="./blog.html">Blogs</a></li>
+                    <img src="./images/logo/moon.png" id="icon1">
                 </ul>
             </div>
             <div class="nav-button">
@@ -350,11 +351,29 @@
         
                          <!-- scrollUpIco -->
 
+                          <!-- whatsaap -->
+        <div class="whatsappchat">
+            <a href="#" target="_blank" class="whatsapp-link">
+              <img src="./images/whatsapprb.png" alt="WhatsApp Logo" class="whatsapp-logo">
+              <span class="tooltip">Chat with us</span>
+          </a>
+        </div>
+
     </main>
 
 
     <script src="./script.js"></script>
-    
+    <script>
+         var icon1 = document.getElementById("icon1");
+  icon1.onclick = function(){
+    document.body.classList.toggle("dark-them");
+    if(document.body.classList.contains("dark-them")){
+      icon1.src = "./images/logo/sun.png";
+    }else{
+      icon1.src = "./images/logo/moon.png";
+    }
+  };
+    </script>
     
 
 </body>

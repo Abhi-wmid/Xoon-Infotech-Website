@@ -49,11 +49,7 @@ const navbar = () =>{
   });
 
 }
-navbar()
 
-
-
-// }
 document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelector('.slides');
   const prevBtn = document.querySelector('.prev');
@@ -96,16 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
 });
 
-// // scrollUpIco
-
-// window.addEventListener('scroll', function() {
-//   var scrollUpIcon = document.getElementById('scrollup-icon');
-//   if (window.scrollY > 100) {
-//       scrollUpIcon.classList.add('show');
-//   } else {
-//       scrollUpIcon.classList.remove('show');
-//   }
-// });
 
 
 
@@ -192,79 +178,61 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// mouse function for image
+// document.addEventListener('DOMContentLoaded', function() {
+//   var container = document.getElementById('homeRight');
+//   var image = document.getElementById('moving-text');
+//   var containerRect = container.getBoundingClientRect();
+//   var containerCenterX = containerRect.left + containerRect.width / 2;
+//   var containerCenterY = containerRect.top + containerRect.height / 2;
 
-document.addEventListener('DOMContentLoaded', function() {
-  var container = document.getElementById('homeRight');
-  var image = document.getElementById('moving-text');
-  var containerRect = container.getBoundingClientRect();
-  var containerCenterX = containerRect.left + containerRect.width / 2;
-  var containerCenterY = containerRect.top + containerRect.height / 2;
+//   container.addEventListener('mousemove', function(e) {
+//       var cursorX = e.clientX;
+//       var cursorY = e.clientY; 
+//       var distX = cursorX - containerCenterX;
+//       var distY = cursorY - containerCenterY;
+//      var maxDistance = 50;
+//       var moveX = (distX / containerRect.width) * maxDistance;
+//       var moveY = (distY / containerRect.height) * maxDistance;
+//       image.style.transition = 'transform 0.1s ease';
+//       image.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+//   });
 
-  container.addEventListener('mousemove', function(e) {
-      var cursorX = e.clientX;
-      var cursorY = e.clientY;
+//   container.addEventListener('mouseleave', function() {
+//          image.style.transition = 'transform 0.3s ease';
+//       image.style.transform = 'translate(0, 0)';
+//   });
+// });
 
-      // Calculate the distance from the cursor to the center of the container
-      var distX = cursorX - containerCenterX;
-      var distY = cursorY - containerCenterY;
+// mouse function for text
+// document.addEventListener('DOMContentLoaded', function() {
+//   var container = document.getElementById('homeLeft');
+//   var text = container.querySelectorAll('h3, h1, h4');
+//   var containerRect = container.getBoundingClientRect();
+//   var containerCenterX = containerRect.left + containerRect.width / 2;
+//   var containerCenterY = containerRect.top + containerRect.height / 2;
+//   container.addEventListener('mousemove', function(e) {
+//       var cursorX = e.clientX;
+//       var cursorY = e.clientY;
+//       var distX = cursorX - containerCenterX;
+//       var distY = cursorY - containerCenterY;
+//       var maxDistance = 20;
 
-      // Define the maximum distance the image can move from the center
-      var maxDistance = 50;
+//       var moveX = (distX / containerRect.width) * maxDistance;
+//       var moveY = (distY / containerRect.height) * maxDistance;
+//       text.forEach(function(element) {
+//           element.style.transition = 'transform 0.1s ease';
+//           element.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+//       });
+//   });
 
-      // Calculate the percentage of maximum distance for the image to move
-      var moveX = (distX / containerRect.width) * maxDistance;
-      var moveY = (distY / containerRect.height) * maxDistance;
-
-      // Apply the movement to the image with animation
-      image.style.transition = 'transform 0.1s ease';
-      image.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
-  });
-
-  container.addEventListener('mouseleave', function() {
-      // Reset image position when cursor leaves the container
-      image.style.transition = 'transform 0.3s ease';
-      image.style.transform = 'translate(0, 0)';
-  });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  var container = document.getElementById('homeLeft');
-  var text = container.querySelectorAll('h3, h1, h4');
-  var containerRect = container.getBoundingClientRect();
-  var containerCenterX = containerRect.left + containerRect.width / 2;
-  var containerCenterY = containerRect.top + containerRect.height / 2;
-
-  container.addEventListener('mousemove', function(e) {
-      var cursorX = e.clientX;
-      var cursorY = e.clientY;
-
-      // Calculate the distance from the cursor to the center of the container
-      var distX = cursorX - containerCenterX;
-      var distY = cursorY - containerCenterY;
-
-      // Define the maximum distance the text can move from the center
-      var maxDistance = 20;
-
-      // Calculate the percentage of maximum distance for the text to move
-      var moveX = (distX / containerRect.width) * maxDistance;
-      var moveY = (distY / containerRect.height) * maxDistance;
-
-      // Apply the movement to each text element with animation
-      text.forEach(function(element) {
-          element.style.transition = 'transform 0.1s ease';
-          element.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
-      });
-  });
-
-  container.addEventListener('mouseleave', function() {
-      // Reset text position when cursor leaves the container
-      text.forEach(function(element) {
-          element.style.transition = 'transform 0.3s ease';
-          element.style.transform = 'translate(0, 0)';
-      });
-  });
-});
+//   container.addEventListener('mouseleave', function() {
+//       text.forEach(function(element) {
+//           element.style.transition = 'transform 0.3s ease';
+//           element.style.transform = 'translate(0, 0)';
+//       });
+//   });
+// });
 
 // for contact
 
@@ -413,47 +381,36 @@ myFunction(widthSize);
 
 
     // navbar srinking
-    let lastScrollTop = 0;
+//     let lastScrollTop = 0;
 
-window.addEventListener("scroll", function() {
-  let currentScroll = window.scrollY;
-  let navbar = document.querySelector('.navbar');
-  let contactButton = document.querySelector('.nav-button');
+// window.addEventListener("scroll", function() {
+//   let currentScroll = window.scrollY;
+//   let navbar = document.querySelector('.navbar');
+//   let contactButton = document.querySelector('.nav-button');
 
-  if (currentScroll > lastScrollTop) {
-    // scrolling down
-    navbar.classList.add('scroll-down'); 
-    navbar.classList.remove('scrollup'); 
-    contactButton.classList.add('scroll-down'); 
-    contactButton.classList.remove('scrollup'); 
-  } else {
-    // scrolling up
-    navbar.classList.remove('scroll-down'); 
-    navbar.classList.add('scrollup'); 
-    contactButton.classList.remove('scroll-down'); 
-    contactButton.classList.add('scrollup'); 
-  }
+//   if (currentScroll > lastScrollTop) {
+//     // scrolling down
+//     navbar.classList.add('scroll-down'); 
+//     navbar.classList.remove('scrollup'); 
+//     contactButton.classList.add('scroll-down'); 
+//     contactButton.classList.remove('scrollup'); 
+//   } else {
+//     // scrolling up
+//     navbar.classList.remove('scroll-down'); 
+//     navbar.classList.add('scrollup'); 
+//     contactButton.classList.remove('scroll-down'); 
+//     contactButton.classList.add('scrollup'); 
+//   }
+//   if (currentScroll === 0) {
+//     navbar.classList.remove('scrollup');
+//     contactButton.classList.remove('scrollup');
+//   }
 
-  // If the user has scrolled to the top of the page, remove the scrollup class
-  if (currentScroll === 0) {
-    navbar.classList.remove('scrollup');
-    contactButton.classList.remove('scrollup');
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-});
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+// });
 
 // for footer subscribe button
-// $('#toggle').click(function() {
-//   if ($(this).is(":checked")) {
-//     $(".sub").css("opacity", 0);
-//     $(".thanks").css("opacity", 1);
-//   } 
-//   else if ($(this).is(":not(:checked)")) {
-//      $(".sub").css("opacity", 1);
-//      $(".thanks").css("opacity", 0);
-//   }
-// });
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -495,7 +452,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
+// for the subscride now
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw70_9o1SQYIgIG68dTcnyKmv9klwEOZdBY3GvBv8WipqhwWdXGzqihzNNc7lZGQF8cnA/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
@@ -525,4 +482,67 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbw70_9o1SQYIgIG68dTcn
     event.preventDefault();
     window.open(whatsappUrl, '_blank');
   });
-  
+
+ 
+  // Initialize Swiper
+  var swiper = new Swiper('.slider', {
+    // Optional parameters
+    slidesPerView: 3,
+    spaceBetween: 30,
+    // If you have more than 3 slides, set loop to true
+    loop: true,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // Pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+var icon1 = document.getElementById("icon1");
+icon1.onclick = function(){
+document.body.classList.toggle("dark-them");
+if(document.body.classList.contains("dark-them")){
+icon1.src = "./images/logo/sun.png";
+}else{
+icon1.src = "./images/logo/moon.png";
+}
+};
+
+// document.addEventListener('DOMContentLoaded', function () {
+// var popup = document.getElementById('popup');
+// var closeBtn = document.getElementById('close');
+// var exploreBtn = document.getElementById('explore');
+// var video = document.getElementById('video');
+
+
+// setTimeout(function () {
+// popup.style.display = 'block';
+// video.play();
+// }, 10000);
+
+
+// closeBtn.onclick = function () {
+// popup.style.display = 'none';
+// video.pause();
+// };
+
+
+// exploreBtn.onclick = function () {
+// window.location.href = 'https://www.envelai.com/'; 
+// };
+
+
+// window.onclick = function (event) {
+// if (event.target == popup) {
+//     popup.style.display = 'none';
+//     video.pause();
+// }
+// };
+// });
+
+
