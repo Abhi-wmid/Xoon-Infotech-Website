@@ -472,7 +472,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbw70_9o1SQYIgIG68dTcn
 
   // whatsappchat
   const whatsappLink = document.querySelector('.whatsapp-link');
-  const phoneNumber = '9839679736';
+  const phoneNumber = '9941913102';
   const message="helo"
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   

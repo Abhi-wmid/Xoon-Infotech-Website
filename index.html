@@ -22,26 +22,73 @@
 <body>
 
     <main>
-      
-
-        <!-- ---------------------------------------------------------  start of navbar  -->
-        <div class="navbar">
-            <div class="nav-logo">
-                <a href="./index.html">
-                    <img src="./images/xoon-RB.png" alt="">
-                </a>
+        <section class="navbar-section">
+            <!-- ---------------------------------------------------------  start of navbar  -->
+            <div class="navbar">
+                <div class="nav-logo">
+                    <a href="./index.html">
+                        <img src="./images/xoon-RB.png" alt="">
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li class="active"><a href="./index.html"> Home </a></li>
+                        <li class="dropdown dropdown-menu">
+                            <a href="./about.html" class="dropbtn">About</a>
+                            <div class="dropdown-content">
+                                <a href="./about.html#about">About Us</a>
+                                <a href="./about.html#mission">Our Mission</a>
+                                <a href="./about.html#vision">Our Vision</a>
+                                <a href="./about.html#team">Our Team</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="./service.html" class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="softwaredevelopment.html">Software Development</a>
+                                <div class="sub-dropdown">
+                                    <a href="webdevelopment.html">Web Development <span class="arrow">&#9656;</span></a>
+                                    <div class="sub-dropdown-content">
+                                        <a>Web Design</a>
+                                        <a >Ecommerce Development</a>
+                                        <a >CMS Development</a>
+                                        <a >PHP Development</a>
+                                        <a >Node JS Development</a>
+                                        <a >React JS Development</a>
+                                    </div>
+                                </div>
+                                <a href="appsdevelopment.html">Mobile Apps Development</a>
+                                <a href="cloudsolution.html">Cloud Solution</a>
+                                <a href="itconsulting.html">IT Consultation</a>
+                                <a href="digitalmarketing.html">Digital Marketing</a>
+                                <a href="datasolution.html">Data Solutions</a>
+                            </div>
+                        </li>
+                        <li><a href="./projects.html"> Projects </a></li>
+                        
+                        <img src="./images/logo/moon.png" id="icon1">
+                    </ul>
+                </div>
+                <div class="nav-button">
+                    <div class="anim-layer"></div>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div id="hamburger-menu">&#9776;</div>
             </div>
-            <div class="nav-items">
-                <ul>
-                    <li class="active"><a href="./index.html"> Home </a></li>
-                    <li class="dropdown dropdown-menu">
-                        <a href="./about.html" class="dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="./about.html#about">About Us</a>
-                            <a href="./about.html#mission">Our Mission</a>
-                            <a href="./about.html#vision">Our Vision</a>
-                            <a href="./about.html#team">Our Team</a>
-                        </div></li>
+        
+            <div id="mobile-menu">
+                <div class="mobile-nav-items">
+                    <ul>
+                        <li class="active"><a href="./index.html"> Home </a></li>
+                        <li class="dropdown dropdown-menu">
+                            <a href="./about.html" class="dropbtn">About</a>
+                            <div class="dropdown-content">
+                                <a href="./about.html#about">About Us</a>
+                                <a href="./about.html#mission">Our Mission</a>
+                                <a href="./about.html#vision">Our Vision</a>
+                                <a href="./about.html#team">Our Team</a>
+                            </div>
+                        </li>
                         <li class="dropdown">
                             <a href="./service.html" class="dropbtn">Services</a>
                             <div class="dropdown-content">
@@ -64,68 +111,18 @@
                                 <a href="datasolution.html">Data Solutions</a>
                             </div>
                         </li>
-                    <li><a href="./projects.html"> Projects </a></li>
-                    <li><a href="./blog.html">Blogs</a></li>
-                    <img src="./images/logo/moon.png" id="icon1">
-                </ul>
-                 
+                        <li><a href="./blog.html"> Blogs </a></li>
+                        <li><a href="./projects.html"> Projects </a></li>
+                    </ul>
+                </div>
+                <div class="mobile-nav-button">
+                    <div class="anim-layer"></div>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div id="hamburger-cross">&#10006;</div>
             </div>
-           
-            <div class="nav-button">
-                <div class="anim-layer"></div>
-                <a href="./contact.html">Contact</a>
-            </div>
-            <div id="hamburger-menu">&#9776;</div>
-            
-        </div>
-      
-
-        <div id="mobile-menu">
-            <div class="mobile-nav-items">
-                <ul>
-                    <li class="active"><a href="./index.html"> Home </a></li>
-                    <li class="dropdown dropdown-menu">
-                        <a href="./about.html" class="dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="./about.html#about">About Us</a>
-                            <a href="./about.html#mission">Our Mission</a>
-                            <a href="./about.html#vision">Our Vision</a>
-                            <a href="./about.html#team">Our Team</a>
-                        </div></li>
-                        <li class="dropdown">
-                            <a href="./service.html" class="dropbtn">Services</a>
-                            <div class="dropdown-content">
-                                <a href="softwaredevelopment.html">Software Development</a>
-                                <div class="sub-dropdown">
-                                    <a href="webdevelopment.html">Web Development <span class="arrow">&#9656;</span></a>
-                                    <div class="sub-dropdown-content">
-                                        <a href="webdesign.html">Web Design</a>
-                                        <a href="ecommercrdevelopment.html">Ecommerce Development</a>
-                                        <a href="cmsdevelopment.html">CMS Development</a>
-                                        <a href="php.html">PHP Development</a>
-                                        <a href="Nodejs.html">Node JS Development</a>
-                                        <a href="reactjs.html">React JS Development</a>
-                                    </div>
-                                </div>
-                                <a href="appsdevelopment.html">Mobile Apps Development</a>
-                                <a href="cloudsolution.html">Cloud Solution</a>
-                                <a href="itconsulting.html">IT Consultation</a>
-                                <a href="digitalmarketing.html">Digital Marketing</a>
-                                <a href="datasolution.html">Data Solutions</a>
-                            </div>
-                        </li>
-                    <li><a href="./blog.html"> Blogs </a></li>
-                    <li><a href="./projects.html"> Projects </a></li>
-                </ul>
-            </div>
-            <div class="mobile-nav-button">
-                <div class="anim-layer"></div>
-                <a href="./contact.html">Contact</a>
-            </div>
-            <div id="hamburger-cross">&#10006;</div>
-            
-        </div>
-        <!-- -------------  End of navbar  -->
+        </section>
+        
         
         
         <div class="home flex" id="home">
@@ -135,7 +132,7 @@
                     <h1>Xoon <span id="highlight">I</span>nfotech</h1>
 
                     <h4>We provide <span id="highlightText">best quality</span> of digital products.</h4>
-                    <p>Xoon Infotach and consulting is a top-notch software development company that designs, develops, and implements IT technology solutions for startups, small businesses and established enterprises.</p>
+                    <p>Xoon Infotech and Consulting is a top-notch software development company that designs, develops, and implements IT technology solutions for startups, small businesses, and established enterprises. Additionally, we provide expert job consulting services to help businesses and individuals achieve their professional goals.</p>
                     <div class="button">
                         <div class="btnContent flex">
                             <a href="./contact.html">Get in touch</a>
@@ -159,8 +156,7 @@
             <div class="aboutContainer">
                 <div class="leftAbout">
                     <h1>Who are we</h1>
-                    <p style="font-size: medium; text-align: justify;">Here at Xoon Infotach and consulting we are committed to ensuring the highest quality and professionalism with the focus of taking your business to the next level. We will take your business to meet your ambition with our out-of-the-box development.
-
+                    <p style="font-size: medium; text-align: justify;">At Xoon Infotech Pvt. Ltd., we are dedicated to delivering top-notch IT solutions and job consulting services. Our commitment to quality and professionalism ensures that your business reaches new heights. With our innovative approach and out-of-the-box development strategies, we will help your business achieve its full potential and meet your ambitions.
                     </p>
                     <div class="button">
                         <div class="btnContent flex">
@@ -194,7 +190,7 @@
                 <a href="./service.html">
                     <div class="cards">
                         <img src="./images/webIcon.png" alt="">
-                        <h3>Software Development</h3>
+                        <h3>Job Consultant</h3>
                     </div>
                 </a>
                 <a href="./service.html">
@@ -231,56 +227,15 @@
             </div>
         </div>
 
-        <!-- ARRRRRRRRRRR -->
-        <div class="containerAR">
-            <div class="heading">Our vertical experts help you delve deeper</div>
-            <div class="cards">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-house-chimney-medical"></i>
-                        <h2>Healthcare</h2>
-                    </div>
-                    <p>We help you build healthcare digital platforms that make offering care seamless,enhance patient engagement, and facilitate data-driven decisions.</p>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-store"></i>
-                        <h2>Marketplace</h2>
-                    </div>
-                    <p>We empower your marketplace digital platform to excel in a competitive landscape, streamlining operations and boosting user experience.</p>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-cart-shopping"></i>
-                        <h2>Ecommerce</h2>
-                    </div>
-                    <p>Meet the evolving needs of your customers with an ecommerce digital platform that optimizes operations, infuses AI for personalized experiences, and facilitates data-driven decisions.</p>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-taxi"></i>
-                        <h2>Travel & Mobility</h2>
-                    </div>
-                    <p>Revamp your travel and mobility operations with custom digital platforms, transforming complex challenges into streamlined, customer-centric experiences.</p>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-rocket"></i>
-                        <h2>Tech-Startups</h2>
-                    </div>
-                    <p>Fueling innovation in tech startups with scalable, secure and robust digital platforms that adapt to rapid changes, ensure superior user experience, and drive growth.</p>
-                </div>
-            </div>
-        </div>
-
+        
 
         <!-- AIIIIIIIIIII -->
         <div class="containerAI">
             <div class="top-section">
                 <div class="left-side">
-                    <h1>From our <span id="highlight">Labs</span></h1>
-                    <p>In today's fast-evolving tech landscape, our team has developed these proof-of-concepts (POCs) to
-                        ensure you stay at the forefront of innovation.</p>
+                    <h1>Visit our <span id="highlight">Envelai</span></h1>
+                    <p>Envelai is a professional networking site that helps users develop their careers, find jobs, and network with businesses. It also offers training for your interview skills with AI mock interviews and live mock interviews, and more</p>
+
                 </div>
                 <div class="right-side">
                     <img src="images/aiiiii2.png" alt="Placeholder Image">
@@ -322,7 +277,18 @@
 
 
         <div class="projects flex">
-            <h1 class="heading">Projects</h1>
+            <style>
+                .heading {
+                    font-family: Arial, sans-serif; /* Change the font */
+                    font-size: 24px; /* Reduce the font size */
+                }
+                .project {
+                   color: #4787e8; /* Color for "Project" */ 
+                }
+            </style>
+            
+            <h1 class="heading">Our <span class="project">Project</span></h1>
+            
 
             <!-- <div class="projectsContainer"> -->
             <div class="project-container">
@@ -332,18 +298,13 @@
                 </div>
 
                 <div class="project-info">
-                    <h1>Project Title</h1>
-                    <p class="description"><b>Project Description:</b> Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit.
-                        Nullam vehicula lectus vitae nibh dapibus, eu cursus nisi vehicula.</p>
-                    <p class="technology"><b>Technology Used:</b> HTML, CSS, JavaScript</p>
-                    <p class="challenges"><b>Challenges Faced:</b> Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit.
-                        Nullam vehicula lectus vitae nibh dapibus, eu cursus nisi vehicula.</p>
-                    <p class="outcome"><b>Outcome Achieved:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam
-                        vehicula lectus vitae nibh dapibus, eu cursus nisi vehicula.</p>
+                    <h1 style="color: #4787e8;">Xoon HealthMix</h1>
+                    <p class="description"><b>Project Description:</b> It is used to sell millets and grains mix product.</p>
+                    <p class="technology"><b>Technology Used:</b> HTML, JavaScript, CSS, SCSS, and Whatsapp for order checkout.</p>
+                    <p class="challenges"><b>Challenges Faced:</b> Integrating various payment gateways for seamless checkout, optimizing the platform for mobile devices, and ensuring secure data transmission.</p>
+                    <p class="outcome"><b>Outcome Achieved:</b> Successfully launched a user-friendly e-commerce platform, increased customer engagement through social media integration, and enhanced customer satisfaction with timely delivery and responsive customer support.</p>
                 </div>
+                
                 <!-- </div> -->
             </div>
             <div class="project-container">
@@ -353,18 +314,13 @@
                 </div>
 
                 <div class="project-info">
-                    <h1>Project Title</h1>
-                    <p class="description"><b>Project Description:</b> Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit.
-                        Nullam vehicula lectus vitae nibh dapibus, eu cursus nisi vehicula.</p>
-                    <p class="technology"><b>Technology Used:</b> HTML, CSS, JavaScript</p>
-                    <p class="challenges"><b>Challenges Faced:</b> Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit.
-                        Nullam vehicula lectus vitae nibh dapibus, eu cursus nisi vehicula.</p>
-                    <p class="outcome"><b>Outcome Achieved:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam
-                        vehicula lectus vitae nibh dapibus, eu cursus nisi vehicula.</p>
+                    <h1 style="color: #4787e8;">Xoon Gym Management</h1>
+                    <p class="description"><b>Project Description:</b> It is a gym management system featuring attendance tracking, member registration, equipment inventory management, staff management, and financial record keeping.</p>
+                    <p class="technology"><b>Technology Used:</b> HTML, CSS, SCSS, JavaScript, PHP, Bootstrap</p>
+                    <p class="challenges"><b>Challenges Faced:</b> Integrating various features seamlessly, ensuring compatibility across different devices and browsers, and optimizing performance for a smooth user experience.</p>
+                    <p class="outcome"><b>Outcome Achieved:</b> Successfully developed and deployed a comprehensive gym management solution, streamlining administrative tasks, enhancing member satisfaction, and improving overall operational efficiency.</p>
                 </div>
+                
                 <!-- </div> -->
             </div>
 
@@ -378,173 +334,123 @@
 
         </div>
 
-        <div class="blog">
-            <h1 class="heading">Blog</h1>
-
-            <div class="blogContainer">
-                <div class="swiper-container slider">
-                    <div class="swiper-wrapper slides">
-                        <div class="swiper-slide card">
-                            <div class="card__header">
-                                <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image"
-                                    width="600">
-                            </div>
-                            <div class="cardBody">
-                                <span class="tag tag-blue">Technology</span>
-                                <h4>What's new in 2022 Tech</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                            </div>
-                            <div class="cardFooter">
-                                <div class="user">
-                                    <img src="https://i.pravatar.cc/40?img=1" alt="userImage" class="userImage">
-                                    <div class="userInfo">
-                                        <h5>Jane Doe</h5>
-                                        <small>2h ago</small>
+        <!--<section class="blog-section">
+            <div class="blog">
+                <h1 class="heading">Blog</h1>
+        
+                <div class="blogContainer">
+                    <div class="swiper-container slider">
+                        <div class="swiper-wrapper slides">
+                            <div class="swiper-slide card">
+                                <div class="card__header">
+                                    <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="cardBody">
+                                    <span class="tag tag-blue">Technology</span>
+                                    <h4>What's new in 2022 Tech</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                </div>
+                                <div class="cardFooter">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/40?img=1" alt="userImage" class="userImage">
+                                        <div class="userInfo">
+                                            <h5>Jane Doe</h5>
+                                            <small>2h ago</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="card__header">
-                                <img src="https://source.unsplash.com/600x400/?technology" alt="card__image" class="card__image"
-                                    width="600">
-                            </div>
-                            <div class="cardBody">
-                                <span class="tag tag-blue">Development</span>
-                                <h4>The secured backend</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                            </div>
-                            <div class="cardFooter">
-                                <div class="user">
-                                    <img src="https://i.pravatar.cc/40?img=2" alt="userImage" class="userImage">
-                                    <div class="userInfo">
-                                        <h5>Jony Doe</h5>
-                                        <small>Yesterday</small>
+                            <div class="swiper-slide card">
+                                <div class="card__header">
+                                    <img src="https://source.unsplash.com/600x400/?technology" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="cardBody">
+                                    <span class="tag tag-blue">Development</span>
+                                    <h4>The secured backend</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                </div>
+                                <div class="cardFooter">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/40?img=2" alt="userImage" class="userImage">
+                                        <div class="userInfo">
+                                            <h5>Jony Doe</h5>
+                                            <small>Yesterday</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="card__header">
-                                <img src="https://source.unsplash.com/600x400/?coding" alt="card__image" class="card__image"
-                                    width="600">
-                            </div>
-                            <div class="cardBody">
-                                <span class="tag tag-blue">Web Development</span>
-                                <h4>Introduce web3</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                            </div>
-                            <div class="cardFooter">
-                                <div class="user">
-                                    <img src="https://i.pravatar.cc/40?img=3" alt="userImage" class="userImage">
-                                    <div class="userInfo">
-                                        <h5>John Doe</h5>
-                                        <small>2d ago</small>
+                            <div class="swiper-slide card">
+                                <div class="card__header">
+                                    <img src="https://source.unsplash.com/600x400/?coding" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="cardBody">
+                                    <span class="tag tag-blue">Web Development</span>
+                                    <h4>Introduce web3</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                </div>
+                                <div class="cardFooter">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/40?img=3" alt="userImage" class="userImage">
+                                        <div class="userInfo">
+                                            <h5>John Doe</h5>
+                                            <small>2d ago</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="card__header">
-                                <img src="https://source.unsplash.com/600x400/?coding" alt="card__image" class="card__image"
-                                    width="600">
-                            </div>
-                            <div class="cardBody">
-                                <span class="tag tag-blue">Web Development</span>
-                                <h4>Introduce web3</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                            </div>
-                            <div class="cardFooter">
-                                <div class="user">
-                                    <img src="https://i.pravatar.cc/40?img=3" alt="userImage" class="userImage">
-                                    <div class="userInfo">
-                                        <h5>John Doe</h5>
-                                        <small>2d ago</small>
+                            <div class="swiper-slide card">
+                                <div class="card__header">
+                                    <img src="https://source.unsplash.com/600x400/?coding" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="cardBody">
+                                    <span class="tag tag-blue">Web Development</span>
+                                    <h4>Introduce web3</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                </div>
+                                <div class="cardFooter">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/40?img=3" alt="userImage" class="userImage">
+                                        <div class="userInfo">
+                                            <h5>John Doe</h5>
+                                            <small>2d ago</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="card__header">
-                                <img src="https://source.unsplash.com/600x400/?coding" alt="card__image" class="card__image"
-                                    width="600">
-                            </div>
-                            <div class="cardBody">
-                                <span class="tag tag-blue">Web Development</span>
-                                <h4>Introduce web3</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                            </div>
-                            <div class="cardFooter">
-                                <div class="user">
-                                    <img src="https://i.pravatar.cc/40?img=3" alt="userImage" class="userImage">
-                                    <div class="userInfo">
-                                        <h5>John Doe</h5>
-                                        <small>2d ago</small>
+                            <div class="swiper-slide card">
+                                <div class="card__header">
+                                    <img src="https://source.unsplash.com/600x400/?coding" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="cardBody">
+                                    <span class="tag tag-blue">Web Development</span>
+                                    <h4>Introduce web3</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                </div>
+                                <div class="cardFooter">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/40?img=3" alt="userImage" class="userImage">
+                                        <div class="userInfo">
+                                            <h5>John Doe</h5>
+                                            <small>2d ago</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-
-                        
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
-
-                
-            
-                
-
-            </div>
-            
-            <div class="button">
-                <div class="btnContent flex">
-                    <a href="./blog.html">More Blogs</a>
-                    <img src="./images/arrow-right-up-svgrepo-com.svg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="contact flex">
-
-            <div class="contactContainer flex">
-
-                <div class="leftContainer">
-                    <h1>Elevate Your Digital Presence.</h1>
-                    <h1>Contact Us</h1>
-                </div>
-                <div class="rightContainer">
-
-                    <div class="button">
-                        <div class="btnContent flex">
-                            <a href="./contact.html">Get in touch</a>
                         </div>
                     </div>
-
+                    <div class="swiper-pagination"></div>
+                    
+                </div>
+        
+                <div class="button">
+                    <div class="btnContent flex">
+                        <a href="./blog.html">More Blogs</a>
+                        <img src="./images/arrow-right-up-svgrepo-com.svg" alt="">
+                    </div>
                 </div>
             </div>
-        </div> -->
-
-        <!-- <div id="popup" class="popup">
-            <div class="popup-content">
-                <span id="close" class="close">&times;</span>
-                <span class="Name">Envelai</span>
-                <video id="video" width="400" controls muted>
-                    <source src="images/intro.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <button id="explore" class="explore">Visit Website Now</button>
-            </div>
-        </div> -->
+        </section>-->
+        
 
 
         <footer>
@@ -552,11 +458,7 @@
             <div class="row">
                 <div class="col">
                     <img src="./images/xoon-RB.png" class="footer_logo">
-                    <p class="footer_about">We provide best quality of digital products.
-                        We provide best quality of digital products.
-                        
-                        We provide best quality of digital products.
-                        Get in touch                                                                                
+                    <p class="footer_about">At Xoon Infotech Pvt. Ltd., we are dedicated to delivering top-notch IT solutions and job consulting services.                                                                   
                     </p>
                     <div class="icons flex social-media-icons">
                         <a href=""><i class="lab la-facebook-f"></i></a>
@@ -571,11 +473,11 @@
                 </div>
                 <div class="col">
                     <h3>Address <div class="bottom_line"><span></span></div></h3>
-                    <p>0000 Romes Main Road</p>
-                    <p>Delhi</p>
-                    <p>Delhi, pin 200000, India</p>
-                    <p class="footer_email">xooninfotach@gamil.com</p>
-                    <h4>+91 9000000000</h4>
+                    <p>Thamarai Nagar, 3rd Steet</p>
+                    <p>Thirumullaivoyal</p>
+                    <p>Chennai, pin 600062, India</p>
+                    <p class="footer_email">xooninfotach@gmail.com</p>
+                    <h4>+91 99419 13102</h4>
                 </div>
                 <div class="col">
                     <h3>Links <div class="bottom_line"><span></span></div></h3>
@@ -584,7 +486,6 @@
                         <li><a href="./about.html">ABOUT</a></li>
                         <li><a href="./service.html">SERVICE</a></li>
                         <li><a href="./projects.html">PROJECTS</a></li>
-                        <li><a href="./blog.html">BLOGS</a></li>
                     </ul>
                 </div>
                 <div class="col">
@@ -604,19 +505,19 @@
             <hr class="new1">
             <p class="copyright">© Xoon Infotech and Consulting Pvt Ltd.</p>
         </div>
-         </footer> 
+        </footer> 
         
 
-             <!-- scrollUpIco -->
+        <!-- scrollUpIco -->
              
 
         <div id="scrollup-icon">
             <a href="#" class="scrollup-link">&#9650;</a>
         </div>
         
-                         <!-- scrollUpIco -->
-
-                          <!-- whatsaap -->
+        <!-- scrollUpIco -->
+         
+      <!-- whatsaap -->
         <div class="whatsappchat">
             <a href="#" target="_blank" class="whatsapp-link">
               <img src="./images/whatsapprb.png" alt="WhatsApp Logo" class="whatsapp-logo">
